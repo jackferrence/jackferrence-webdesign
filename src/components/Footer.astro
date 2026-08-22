@@ -1,0 +1,38 @@
+---
+import { navigation, site } from "../data/site";
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-navy pb-28 pt-16 text-white md:pb-10 md:pt-20">
+  <div class="container">
+    <div class="grid gap-12 border-b border-white/15 pb-14 md:grid-cols-[1.4fr_0.8fr_0.8fr]">
+      <div>
+        <a href="/" class="inline-flex items-center gap-3 text-lg font-extrabold tracking-tight">
+          <span class="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
+          {site.name}
+        </a>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-white/68">{site.tagline} Fast, clear, and built by the same person who answers your call.</p>
+        <a class="mt-7 inline-block text-lg font-bold text-mist underline decoration-accent decoration-2 underline-offset-8" href={site.phoneHref}>{site.phoneDisplay}</a>
+      </div>
+      <div>
+        <p class="footer-heading">Pages</p>
+        <nav class="mt-5 grid gap-3" aria-label="Footer navigation">
+          {navigation.map((item) => <a class="footer-link" href={item.href}>{item.label}</a>)}
+        </nav>
+      </div>
+      <div>
+        <p class="footer-heading">Find Jack</p>
+        <div class="mt-5 grid gap-3">
+          <a class="footer-link break-all" href={site.emailHref}>{site.email}</a>
+          <a class="footer-link" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="footer-link" href={site.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+          <span class="text-sm text-white/58">Newport Beach, California</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {year} {site.name}. All rights reserved.</p>
+      <p>Serving Orange County and coastal Southern California.</p>
+    </div>
+  </div>
+</footer>

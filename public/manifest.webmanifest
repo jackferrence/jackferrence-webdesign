@@ -1,0 +1,10 @@
+{
+  "name": "Jack Ferrence Web Design",
+  "short_name": "Jack Ferrence",
+  "description": "Websites for service companies in SoCal.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfbf6",
+  "theme_color": "#0b1d2a",
+  "icons": []
+}

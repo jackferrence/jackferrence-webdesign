@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jack Ferrence">
+  <rect width="64" height="64" rx="15" fill="#0b1d2a"/>
+  <circle cx="47" cy="17" r="6" fill="#f25b3f"/>
+  <path d="M17 15h13v24c0 7-4.5 11-11.5 11-2.6 0-4.8-.5-6.5-1.5l3.3-8.6c.8.4 1.5.6 2.2.6 1.9 0 2.9-1.1 2.9-3.4V23H17v-8Zm17 0h18v9.5H44v5.2h7V39h-7v11H34V15Z" fill="#fdfbf6"/>
+</svg>

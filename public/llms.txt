@@ -1,0 +1,61 @@
+# Jack Ferrence
+
+> Websites for service companies in SoCal.
+
+Jack Ferrence builds fast, mobile-first marketing websites and sets up Google Business Profiles for owner-operated service companies across Orange County and coastal Southern California. He is based in Newport Beach and specializes in marine trades around Newport Harbor.
+
+## Contact
+
+- Phone: (702) 817-8753
+- Email: jackferrence11@gmail.com
+
+## Primary services
+
+- Google Business Profile setup: $400
+- Domain and business email setup: $200
+- One-page website: $900, typically one week
+- Three-page website: $1,600, typically two weeks
+- Five-page website: $2,400, typically three weeks
+- Extra service page: $250
+- On-site photo session: $350
+- Review request system: $200
+- Website care: $100/month
+- Website Care+: $175/month
+- À la carte support: $80/hour
+
+## Bundles
+
+- Dock: $1,400
+- Harbor: $2,400
+- Full Slip: $3,300
+
+## Process
+
+1. A 20-minute call with Jack
+2. A short intake with the business basics
+3. A custom mockup within one week
+4. Build, approval, and launch about two weeks later for a typical three-page site
+
+Copywriting is included. The client does not need to draft the website copy.
+
+## About Jack
+
+Jack earned a B.S. in Computer Science from Biola University in 2026 with a 3.65 GPA. He has worked as a freelance web developer since 2025 using React, Next.js, Astro, and Netlify, including ongoing client-site maintenance and production troubleshooting. He built an interactive product prototype for Global Infrared for a live pitch with a major prospective client and previously managed a new Shopify product-line storefront during an internship with ArmaJoint. He created Dobber, a live multiplayer sports-bingo application, and built a UFC fight prediction model that reached 69% accuracy against bookmaker odds. He is a former NCAA Division II decathlete and PacWest Conference Champion.
+
+## Pages
+
+- [Home](https://jackferrence.com/)
+- [Services and pricing](https://jackferrence.com/services/)
+- [Demo work](https://jackferrence.com/work/)
+- [Process](https://jackferrence.com/process/)
+- [About Jack](https://jackferrence.com/about/)
+- [Contact](https://jackferrence.com/contact/)
+
+## External profiles
+
+- LinkedIn: https://www.linkedin.com/in/jackferrence
+- GitHub: https://github.com/jack-ferrence
+
+## Important qualification
+
+The portfolio concepts currently shown on the Work page are clearly labeled demonstration builds. They are not presented as completed client work.

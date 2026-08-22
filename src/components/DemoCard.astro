@@ -1,0 +1,32 @@
+---
+interface Props {
+  trade: string;
+  packageName: string;
+  name: string;
+  kicker: string;
+  theme: string;
+  compact?: boolean;
+}
+const { trade, packageName, name, kicker, theme, compact = false } = Astro.props;
+---
+
+<article class:list={["demo-card", { "demo-card-compact": compact }]}>
+  <div class:list={["demo-screen", `demo-${theme}`]} aria-hidden="true">
+    <div class="demo-browser-bar"><span></span><span></span><span></span><i></i></div>
+    <div class="demo-site-head"><b>{name.split(" ").slice(0, 2).join(" ")}</b><span></span><span></span><em>Call now</em></div>
+    <div class="demo-site-body">
+      <small>{trade}</small>
+      <strong>{kicker}</strong>
+      <p></p><p></p>
+      <button>Request service</button>
+    </div>
+  </div>
+  <div class="p-6 sm:p-7">
+    <div class="flex items-center justify-between gap-4">
+      <span class="demo-label">Demo build</span>
+      <span class="text-xs font-bold uppercase tracking-[0.12em] text-slate">{packageName}</span>
+    </div>
+    <h3 class="mt-5 text-xl font-black tracking-[-0.035em] text-navy">{name}</h3>
+    <p class="mt-2 text-sm leading-relaxed text-slate">{trade}</p>
+  </div>
+</article>

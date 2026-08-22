@@ -1,0 +1,14 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page not found" description="The page you requested could not be found." noindex>
+  <section class="grid min-h-[68vh] place-items-center bg-paper py-20">
+    <div class="container text-center">
+      <p class="text-sm font-black uppercase tracking-[0.18em] text-accent">404</p>
+      <h1 class="mx-auto mt-5 max-w-3xl text-balance text-5xl font-black tracking-[-0.055em] text-navy sm:text-6xl">That page is off the map.</h1>
+      <p class="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate">The link may be old, or the address may have been typed incorrectly.</p>
+      <a class="button button-primary mt-9" href="/">Go to the homepage</a>
+    </div>
+  </section>
+</BaseLayout>

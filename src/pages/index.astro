@@ -1,0 +1,147 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTASection from "../components/CTASection.astro";
+import DemoCard from "../components/DemoCard.astro";
+import PackageCard from "../components/PackageCard.astro";
+import { demos, packages, site } from "../data/site";
+
+const description = "Fast websites and Google Business Profile setup for owner-operated service companies across Orange County and coastal Southern California.";
+---
+
+<BaseLayout title={site.name} description={description}>
+  <section class="relative overflow-hidden bg-mist py-16 sm:py-24 lg:py-30">
+    <div class="container grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div>
+        <p class="eyebrow">Websites for service companies in SoCal</p>
+        <h1 class="mt-7 max-w-3xl text-balance text-[clamp(3.5rem,8vw,6.7rem)] font-black leading-[0.89] tracking-[-0.07em] text-navy">
+          Turn the name they heard into the <span class="text-accent">call you get.</span>
+        </h1>
+        <p class="mt-8 max-w-xl text-lg leading-relaxed text-slate sm:text-xl">
+          Fast websites, a claimed Google listing, and one person who stays reachable when something needs attention.
+        </p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a class="button button-primary" href="/contact/">Build my site <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="/services/">See packages and prices</a>
+        </div>
+        <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-t border-line pt-6 text-xs font-extrabold uppercase tracking-[0.1em] text-slate">
+          <span>Based in Newport Beach</span><span>Copy included</span><span>Direct support</span>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -left-8 -top-8 h-24 w-24 rounded-full border border-sea/20"></div>
+        <div class="relative rounded-2xl border border-line bg-white p-5 shadow-[0_30px_80px_rgba(11,29,42,0.14)] sm:p-8">
+          <div class="flex items-center justify-between border-b border-line pb-5">
+            <div>
+              <p class="text-xs font-black uppercase tracking-[0.15em] text-sea">A real referral</p>
+              <p class="mt-2 text-sm font-bold text-navy">What happens after someone says your name?</p>
+            </div>
+            <span class="h-3 w-3 rounded-full bg-accent shadow-[0_0_0_7px_rgba(242,91,63,0.1)]"></span>
+          </div>
+          <ol class="mt-4 grid">
+            <li class="referral-step">
+              <span>01</span><div><b>They hear your name</b><p>A neighbor, dockmaster, or customer recommends you.</p></div><i class="bg-sea"></i>
+            </li>
+            <li class="referral-step">
+              <span>02</span><div><b>They search for you</b><p>Your online presence has a few seconds to confirm the referral.</p></div><i class="bg-accent"></i>
+            </li>
+            <li class="referral-step">
+              <span>03</span><div><b>They decide who looks real</b><p>Clear services, real proof, and an easy next step win the call.</p></div><i class="bg-sea"></i>
+            </li>
+            <li class="referral-step border-b-0">
+              <span>04</span><div><b>Your phone rings</b><p>The site did its job. You take it from there.</p></div><i class="bg-navy"></i>
+            </li>
+          </ol>
+          <a class="mt-3 flex items-center justify-between rounded-xl bg-navy p-5 text-white" href={site.phoneHref}>
+            <span><small class="block text-[10px] font-black uppercase tracking-[0.15em] text-white/55">Ready to call</small><b class="mt-1 block text-lg">{site.phoneDisplay}</b></span>
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-accent text-xl" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-navy text-white">
+    <div class="container grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+      <div>
+        <p class="eyebrow">The referral leak</p>
+        <h2 class="mt-6 text-balance text-4xl font-black leading-[1] tracking-[-0.05em] sm:text-5xl">A good reputation can still lose the job.</h2>
+      </div>
+      <div class="max-w-2xl">
+        <p class="text-xl leading-relaxed text-white/78 sm:text-2xl">Someone hears your name, searches it, finds nothing useful, and calls the next company that looks easier to trust.</p>
+        <p class="mt-6 text-base leading-relaxed text-white/58">You do not need a giant marketing machine. You need a fast site that explains the work, a Google profile that shows up, and a clear way for the right customer to reach you.</p>
+        <div class="mt-9 grid gap-4 sm:grid-cols-3">
+          <div class="value-chip"><strong>Fast</strong><span>No template bloat.</span></div>
+          <div class="value-chip"><strong>Clear</strong><span>No agency jargon.</span></div>
+          <div class="value-chip"><strong>Reachable</strong><span>Jack answers.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-paper" id="packages">
+    <div class="container">
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="eyebrow">Website packages</p>
+          <h2 class="mt-6 max-w-3xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">A clear scope. A real price. No mystery proposal.</h2>
+        </div>
+        <a class="mb-2 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6" href="/services/">See every service and bundle →</a>
+      </div>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {packages.map((item) => <PackageCard {...item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad border-y border-line bg-mist">
+    <div class="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
+      <div>
+        <p class="eyebrow">After launch</p>
+        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">You should still know who to call.</h2>
+        <p class="mt-6 max-w-lg text-lg leading-relaxed text-slate">The site is yours. The care plan is optional. Either way, you are not opening a support ticket with a stranger.</p>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <article class="rounded-2xl border border-line bg-white p-7 shadow-sm">
+          <div class="flex items-end justify-between gap-4"><h3 class="text-2xl font-black tracking-tight">Care</h3><p class="text-xl font-black text-accent">$100<span class="text-xs text-slate">/mo</span></p></div>
+          <p class="mt-5 text-sm leading-relaxed text-slate">Core maintenance, uptime checks, priority response, and up to 45 minutes of content updates each month.</p>
+        </article>
+        <article class="rounded-2xl border border-sea/35 bg-white p-7 shadow-sm">
+          <div class="flex items-end justify-between gap-4"><h3 class="text-2xl font-black tracking-tight">Care+</h3><p class="text-xl font-black text-sea">$175<span class="text-xs text-slate">/mo</span></p></div>
+          <p class="mt-5 text-sm leading-relaxed text-slate">Everything in Care, up to 90 minutes of updates, quarterly Google profile review, and faster turnaround.</p>
+        </article>
+        <p class="sm:col-span-2 mt-1 text-sm font-bold text-slate">Prefer occasional help? À la carte updates are $80/hour.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-mist">
+    <div class="container">
+      <div class="flex items-end justify-between gap-8">
+        <div>
+          <p class="eyebrow">Selected concepts</p>
+          <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Built for the way local service work is actually sold.</h2>
+        </div>
+        <a class="hidden shrink-0 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6 sm:block" href="/work/">View all demo builds →</a>
+      </div>
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">These are demonstration builds created to show the strategy, hierarchy, and conversion approach for different trades—not presented as completed client work.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {demos.slice(0, 3).map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} compact />)}
+      </div>
+      <a class="button button-outline mt-7 w-full sm:hidden" href="/work/">View all demo builds</a>
+    </div>
+  </section>
+
+  <CTASection />
+</BaseLayout>
+
+<style>
+  .referral-step { position: relative; display: grid; grid-template-columns: 2.1rem 1fr 0.7rem; gap: 0.85rem; align-items: center; border-bottom: 1px solid var(--color-line); padding-block: 1rem; }
+  .referral-step > span { font-size: 0.65rem; font-weight: 900; color: var(--color-slate); }
+  .referral-step b { display: block; font-size: 0.9rem; color: var(--color-navy); }
+  .referral-step p { margin-top: 0.25rem; max-width: 22rem; font-size: 0.72rem; line-height: 1.5; color: var(--color-slate); }
+  .referral-step i { width: 0.55rem; height: 0.55rem; border-radius: 999px; }
+  .value-chip { border: 1px solid rgb(255 255 255 / 13%); border-radius: 0.75rem; padding: 1rem; }
+  .value-chip strong { display: block; color: white; font-size: 0.9rem; }
+  .value-chip span { display: block; margin-top: 0.35rem; color: rgb(255 255 255 / 52%); font-size: 0.72rem; }
+</style>

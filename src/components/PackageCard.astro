@@ -1,0 +1,38 @@
+---
+interface Props {
+  name: string;
+  price: string;
+  timeline?: string;
+  description?: string;
+  note?: string;
+  features?: string[];
+  includes?: string[];
+  featured?: boolean;
+}
+
+const { name, price, timeline, description, note, features = [], includes = [], featured = false } = Astro.props;
+const items = features.length ? features : includes;
+---
+
+<article class:list={["package-card", { "package-card-featured": featured }]}>
+  {featured && <span class="package-badge">Most popular</span>}
+  <div class="flex items-start justify-between gap-5">
+    <div>
+      <h3 class="text-2xl font-black tracking-[-0.035em] text-navy">{name}</h3>
+      {timeline && <p class="mt-2 text-sm font-bold uppercase tracking-[0.14em] text-slate">{timeline}</p>}
+    </div>
+    <p class="shrink-0 text-2xl font-black tracking-[-0.04em] text-accent">{price}</p>
+  </div>
+  {(description || note) && <p class="mt-6 min-h-12 text-[15px] leading-relaxed text-slate">{description ?? note}</p>}
+  <ul class="mt-7 grid gap-3 border-t border-line pt-6">
+    {items.map((item) => (
+      <li class="flex gap-3 text-sm font-semibold leading-relaxed text-navy">
+        <span class="mt-1 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-sea/12 text-[10px] font-black text-sea" aria-hidden="true">✓</span>
+        {item}
+      </li>
+    ))}
+  </ul>
+  <a class="mt-8 inline-flex items-center gap-2 text-sm font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-5" href={`/contact/?package=${encodeURIComponent(name)}`}>
+    Ask about {name} <span aria-hidden="true">→</span>
+  </a>
+</article>

@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTASection from "../components/CTASection.astro";
+import PageHero from "../components/PageHero.astro";
+import { site } from "../data/site";
+---
+
+<BaseLayout title="About Jack" description="Meet Jack Ferrence, a Newport Beach web developer with a B.S. in Computer Science from Biola University who builds fast sites for Southern California service companies.">
+  <PageHero eyebrow="About Jack" title="A builder, not an account manager." intro="Jack Ferrence designs the site, writes the copy, builds the code, launches it, and answers when you call. That is the whole org chart.">
+    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+      <a class="button button-accent" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      <a class="button button-ghost-light" href={site.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </PageHero>
+
+  <section class="section-pad bg-mist">
+    <div class="container grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
+      <aside>
+        <div class="overflow-hidden rounded-2xl border border-line bg-paper shadow-sm">
+          <div class="grid aspect-[4/3] place-items-center bg-navy">
+            <div class="text-center">
+              <span class="mx-auto grid h-28 w-28 place-items-center rounded-full border border-white/20 bg-white/[0.05] text-4xl font-black tracking-[-0.06em] text-white">JF</span>
+              <p class="mt-5 text-xs font-black uppercase tracking-[0.16em] text-accent">Newport Beach</p>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 divide-x divide-line">
+            <div class="p-5"><strong class="block text-2xl font-black tracking-tight text-navy">2026</strong><span class="mt-1 block text-xs font-bold text-slate">Biola CS graduate</span></div>
+            <div class="p-5"><strong class="block text-2xl font-black tracking-tight text-navy">3.65</strong><span class="mt-1 block text-xs font-bold text-slate">College GPA</span></div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="max-w-3xl">
+        <p class="eyebrow">The honest version</p>
+        <h2 class="mt-6 text-balance text-4xl font-black leading-[1] tracking-[-0.05em] text-navy sm:text-5xl">Technical enough to build it right. Close enough to understand the work.</h2>
+        <div class="mt-8 grid gap-6 text-base leading-[1.85] text-slate">
+          <p>Jack earned a B.S. in Computer Science from Biola University in 2026 with a 3.65 GPA. He has worked as a freelance web developer since 2025, building and maintaining client sites end to end with React, Next.js, Astro, and Netlify.</p>
+          <p>That work includes ongoing site maintenance and the unglamorous production problems that matter to a real business—domains, DNS, hosting, and configuration—as well as an interactive product prototype for Global Infrared delivered for a live pitch with a major prospective client.</p>
+          <p>Before freelancing, Jack managed the Shopify storefront for a new product line during an internship with ArmaJoint, owning the catalog, product pages, navigation, checkout, and live desktop and mobile fixes.</p>
+          <p>He also builds his own software. Dobber is a live multiplayer sports-bingo web app. His UFC fight prediction model has hit 69% accuracy against bookmaker odds. Those projects matter here because they require the same habits a good service-business site does: decide what matters, make the interface obvious, and ship something that works.</p>
+          <p>Jack lives in Newport Beach and works with trades around the same harbor he sees every day. Marine engine work, electrical service, surveying, and hull maintenance are the core specialty. He also works with pool companies, HVAC contractors, landscapers, detailers, inspectors, and other owner-operators across coastal Southern California.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad border-y border-line bg-paper">
+    <div class="container">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Built outside the classroom</p>
+        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">The work behind the website work.</h2>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        <article class="about-card">
+          <span>01 / Client delivery</span>
+          <h3>Global Infrared</h3>
+          <p>An interactive product prototype built for a live client pitch, with the visual polish and product logic needed in the room.</p>
+        </article>
+        <article class="about-card">
+          <span>02 / Product build</span>
+          <h3>Dobber</h3>
+          <p>A live multiplayer sports-bingo web app—real-time product thinking beyond a static brochure site.</p>
+        </article>
+        <article class="about-card">
+          <span>03 / Data project</span>
+          <h3>UFC prediction model</h3>
+          <p>A fight model reaching 69% accuracy against bookmaker odds, built around testing, iteration, and measurable results.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-mist">
+    <div class="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-24">
+      <div>
+        <p class="eyebrow">Former decathlete</p>
+        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Ten events. One score.</h2>
+      </div>
+      <div>
+        <p class="text-xl leading-relaxed text-navy">Before freelance work, Jack competed as an NCAA Division II decathlete and became a PacWest Conference Champion.</p>
+        <p class="mt-5 text-base leading-relaxed text-slate">The decathlon is an honest sport: preparation shows, weak events count, and the total matters more than any single highlight. That is a useful way to build websites too. Speed, clarity, mobile usability, copy, search setup, and follow-through all have to work together.</p>
+        <div class="mt-8 grid grid-cols-5 gap-2" aria-hidden="true">
+          <span class="h-2 rounded-full bg-navy"></span><span class="h-2 rounded-full bg-sea"></span><span class="h-2 rounded-full bg-accent"></span><span class="h-2 rounded-full bg-sea"></span><span class="h-2 rounded-full bg-navy"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTASection title="You will talk to the person doing the work." text="No discovery team, no handoff, no mystery. A direct conversation with Jack is the first step." />
+</BaseLayout>
+
+<style>
+  .about-card { border: 1px solid var(--color-line); border-radius: 1rem; background: white; padding: 1.8rem; }
+  .about-card span { color: var(--color-sea); font-size: 0.64rem; font-weight: 900; letter-spacing: 0.13em; text-transform: uppercase; }
+  .about-card h3 { margin-top: 1.6rem; color: var(--color-navy); font-size: 1.35rem; font-weight: 900; letter-spacing: -0.035em; }
+  .about-card p { margin-top: 0.8rem; color: var(--color-slate); font-size: 0.87rem; line-height: 1.75; }
+</style>
