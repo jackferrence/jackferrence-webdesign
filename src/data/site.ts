@@ -86,6 +86,7 @@ export const demos = [
     name: "Harbor Point Marine Works",
     kicker: "Mobile repairs, clearly explained.",
     theme: "teal",
+    url: "https://harbor-point-marine-works.jackferrence11.chatgpt.site",
   },
   {
     trade: "Marine surveying",
@@ -93,6 +94,7 @@ export const demos = [
     name: "Meridian Marine Surveying",
     kicker: "Trust for high-stakes vessel decisions.",
     theme: "sand",
+    url: "https://meridian-marine-surveying.jackferrence11.chatgpt.site",
   },
   {
     trade: "Hull maintenance",
@@ -100,6 +102,7 @@ export const demos = [
     name: "Tidewater Hull Service",
     kicker: "Fast local service, easy to call.",
     theme: "coral",
+    url: "https://tidewater-hull-service.jackferrence11.chatgpt.site",
   },
   {
     trade: "Pool service",
