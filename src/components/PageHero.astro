@@ -11,7 +11,7 @@ const { eyebrow, title, intro, narrow = false } = Astro.props;
 <section class="page-hero">
   <div class:list={["container", { "max-w-[920px]": narrow }]}>
     <p class="eyebrow">{eyebrow}</p>
-    <h1 class="mt-6 max-w-5xl text-balance text-5xl font-black leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">{title}</h1>
+    <h1 class="mt-6 max-w-5xl text-balance text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">{title}</h1>
     <p class="mt-7 max-w-2xl text-lg leading-relaxed text-white/70 sm:text-xl">{intro}</p>
     <slot />
   </div>

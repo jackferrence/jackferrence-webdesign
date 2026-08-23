@@ -70,7 +70,7 @@ export const demos = [
     name: "Harbor Point Marine Works",
     kicker: "Mobile repairs, clearly explained.",
     theme: "teal",
-    url: "https://harbor-point-marine-works.jackferrence11.chatgpt.site",
+    url: "/demos/harbor-point/",
   },
   {
     trade: "Marine surveying",
@@ -94,6 +94,7 @@ export const demos = [
     name: "Cobalt Pool Care",
     kicker: "Recurring service made simple.",
     theme: "blue",
+    url: "/demos/cobalt-pool/",
   },
   {
     trade: "HVAC contractor",
@@ -101,6 +102,7 @@ export const demos = [
     name: "Westline Air",
     kicker: "Clear options when comfort cannot wait.",
     theme: "orange",
+    url: "/demos/westline-air/",
   },
   {
     trade: "Mobile detailing",

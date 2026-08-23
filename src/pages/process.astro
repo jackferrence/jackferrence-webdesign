@@ -37,7 +37,7 @@ const steps = [
 
 <BaseLayout title="Process" description="A direct website process: 20-minute call, short intake, a custom mockup within one week, and launch about two weeks later. Copywriting included.">
   <PageHero eyebrow="How it works" title="You explain the business. Jack writes and builds the site." intro="There is no content homework packet and no account manager translating your notes. The person on the first call is the person doing the work.">
-    <div class="mt-9 flex flex-wrap gap-3 text-xs font-black uppercase tracking-[0.12em] text-white/58">
+    <div class="mt-9 flex flex-wrap gap-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white/58">
       <span class="rounded-full border border-white/15 px-4 py-2">Copy included</span>
       <span class="rounded-full border border-white/15 px-4 py-2">Fixed scope</span>
       <span class="rounded-full border border-white/15 px-4 py-2">Direct communication</span>
@@ -68,11 +68,11 @@ const steps = [
     <div class="container grid gap-12 lg:grid-cols-2 lg:gap-24">
       <div>
         <p class="eyebrow">The client writes nothing</p>
-        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Good website copy starts as a good conversation.</h2>
+        <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Good website copy starts as a good conversation.</h2>
         <p class="mt-6 text-lg leading-relaxed text-slate">You already know the work. Jack asks the questions, finds the useful details, and turns them into language a customer can understand.</p>
       </div>
       <div class="rounded-2xl bg-navy p-7 text-white sm:p-10">
-        <p class="text-xs font-black uppercase tracking-[0.16em] text-accent">What to have ready</p>
+        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-accent">What to have ready</p>
         <ul class="mt-7 grid gap-5">
           <li class="ready-item"><span>01</span><div><strong>Your main services</strong><p>What you do—and what work you want more of.</p></div></li>
           <li class="ready-item"><span>02</span><div><strong>Your service area</strong><p>The cities, marinas, or neighborhoods you actually cover.</p></div></li>
@@ -88,12 +88,12 @@ const steps = [
     <div class="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
       <div>
         <p class="eyebrow">Timeline</p>
-        <h2 class="mt-6 text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Fast, with room for real feedback.</h2>
+        <h2 class="mt-6 text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Fast, with room for real feedback.</h2>
       </div>
       <div>
         <p class="text-xl leading-relaxed text-navy">A typical three-page site reaches a finished mockup in week one and launches about two weeks later.</p>
         <p class="mt-5 text-base leading-relaxed text-slate">The schedule assumes timely feedback and access to the domain or Google profile when needed. One-page sites can move faster; larger sites get the timeline shown on the services page.</p>
-        <a class="mt-7 inline-flex items-center gap-2 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6" href="/services/">Compare package timelines <span aria-hidden="true">→</span></a>
+        <a class="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-6" href="/services/">Compare package timelines <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -104,16 +104,16 @@ const steps = [
 <style>
   .process-step { display: grid; gap: 1.5rem; border-bottom: 1px solid var(--color-line); padding-block: 2.1rem; }
   .process-step:last-child { border-bottom: 0; }
-  .step-number { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.7rem; font-weight: 900; }
-  .step-time { color: var(--color-sea); font-size: 0.65rem; font-weight: 900; letter-spacing: 0.13em; text-transform: uppercase; }
-  .process-step h2 { color: var(--color-navy); font-size: 1.75rem; font-weight: 900; letter-spacing: -0.04em; }
+  .step-number { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.7rem; font-weight: 700; }
+  .step-time { color: var(--color-sea); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
+  .process-step h2 { color: var(--color-navy); font-size: 1.75rem; font-weight: 700; letter-spacing: -0.04em; }
   .process-step > div > p { margin-top: 0.65rem; max-width: 39rem; color: var(--color-slate); font-size: 0.9rem; line-height: 1.75; }
   .step-result { display: flex; gap: 0.8rem; align-items: flex-start; border-left: 2px solid var(--color-sea); padding-left: 1rem; }
-  .step-result span { color: var(--color-sea); font-size: 0.8rem; font-weight: 900; }
+  .step-result span { color: var(--color-sea); font-size: 0.8rem; font-weight: 700; }
   .step-result p { color: var(--color-navy); font-size: 0.8rem; font-weight: 800; line-height: 1.6; }
   .ready-item { display: grid; grid-template-columns: 2rem 1fr; gap: 1rem; align-items: flex-start; }
-  .ready-item > span { color: var(--color-accent); font-size: 0.65rem; font-weight: 900; letter-spacing: 0.1em; }
-  .ready-item strong { display: block; font-size: 0.95rem; font-weight: 900; }
+  .ready-item > span { color: var(--color-accent); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; }
+  .ready-item strong { display: block; font-size: 0.95rem; font-weight: 700; }
   .ready-item p { margin-top: 0.3rem; color: rgb(255 255 255 / 55%); font-size: 0.78rem; line-height: 1.55; }
   @media (min-width: 1024px) {
     .process-step { grid-template-columns: 0.45fr 1.1fr 0.65fr; align-items: center; gap: 3rem; padding-block: 2.6rem; }
