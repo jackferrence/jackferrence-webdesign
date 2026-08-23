@@ -30,29 +30,36 @@ export const navigation = [
   { href: "/contact/", label: "Contact" },
 ];
 
-export const bundles = [
+export const packages = [
   {
-    name: "Dock",
-    timeline: "One-page website",
-    price: "$1,400",
-    note: "Get found and look legitimate.",
-    includes: ["One-page website", "Google Business Profile setup", "Domain + business email setup", "All copywriting"],
+    name: "One-page website",
+    timeline: "2 weeks",
+    price: "$1,200",
+    note: "A focused site that makes the business clear and gets the call.",
+    includes: ["All copywriting", "Domain setup", "Business email setup", "2 rounds of revisions"],
   },
   {
-    name: "Harbor",
-    timeline: "Three-page website",
-    price: "$2,400",
-    note: "The strongest fit for most owner-operators.",
-    includes: ["Three-page website", "Google Business Profile setup", "Domain + business email setup", "Review request system", "On-site photo session", "All copywriting"],
+    name: "Three-page website",
+    timeline: "2 weeks",
+    price: "$1,900",
+    note: "More room for the work, the proof, and the service details buyers need.",
+    includes: ["All copywriting", "Domain setup", "Business email setup", "2 rounds of revisions"],
     featured: true,
   },
   {
-    name: "Full Slip",
-    timeline: "Five-page website",
-    price: "$3,300",
-    note: "A complete local lead system.",
-    includes: ["Five-page website", "One extra service landing page", "Google Business Profile setup", "Domain + business email setup", "Review request system", "On-site photo session", "All copywriting"],
+    name: "Five-page website",
+    timeline: "2 weeks",
+    price: "$2,500",
+    note: "A complete local presence for businesses with several valuable services.",
+    includes: ["All copywriting", "Domain setup", "Business email setup", "2 rounds of revisions"],
   },
+];
+
+export const additionalServices = [
+  { name: "Google Business Profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, description, photos, hours, and core profile fields. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window.", timing: "3 days after admin confirmation" },
+  { name: "Extra service page", price: "$250", detail: "A targeted landing page for one additional service, built to match the main site.", timing: "2–3 days" },
+  { name: "On-site photo session", price: "$350", detail: "A practical local shoot for the owner, team, equipment, process, and finished work. About 2 hours.", timing: "Scheduled" },
+  { name: "Review request system", price: "$200", detail: "A simple branded link and repeatable process that makes asking happy customers easier.", timing: "3 days" },
 ];
 
 export const demos = [
@@ -119,7 +126,7 @@ export const faqs = [
   {
     question: "Will I own the site and domain?",
     answer:
-      "Yes. The domain is registered in your name, and the finished site source can live in an account you control. There is no proprietary website builder lock-in.",
+      "Yes. The domain is registered in your name, and the finished site is yours. If you ever cancel a care plan, the site transfers to an account you control. There is no proprietary website builder lock-in.",
   },
   {
     question: "Can you guarantee where I rank on Google?",
@@ -129,11 +136,11 @@ export const faqs = [
   {
     question: "What happens after launch?",
     answer:
-      "Choose a monthly care plan if you want Jack to handle updates and keep an eye on the site, or request changes as needed at $80 per hour. Either way, you still have a person you can reach.",
+      "Choose a monthly care plan if you want Jack to handle updates and keep an eye on the site, or request changes as needed at $110 per hour, one-hour minimum. Either way, you still have a person you can reach.",
   },
   {
     question: "How does payment work?",
     answer:
-      "Projects are booked with 50% up front. The remaining 50% is due after you approve the finished site and before launch. Monthly care starts only after the site is live.",
+      "Projects are booked with 50% up front. The remaining 50% is due after you approve the finished site and before launch. Any service under $500 is paid in full up front. Monthly care starts only after the site is live.",
   },
 ];
