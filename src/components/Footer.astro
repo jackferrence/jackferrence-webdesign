@@ -1,5 +1,5 @@
 ---
-import { footerNav, site } from "../data/site";
+import { navigation, site } from "../data/site";
 const year = new Date().getFullYear();
 ---
 
@@ -16,7 +16,7 @@ const year = new Date().getFullYear();
       <div>
         <p class="footer-heading">Pages</p>
         <nav class="mt-5 grid gap-3" aria-label="Footer navigation">
-          {footerNav.map((item) => <a class="footer-link" href={item.href}>{item.label}</a>)}
+          {navigation.map((item) => <a class="footer-link" href={item.href}>{item.label}</a>)}
         </nav>
       </div>
       <div>
@@ -30,7 +30,7 @@ const year = new Date().getFullYear();
     </div>
     <div class="flex flex-col gap-3 pt-7 text-xs text-white/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© {year} {site.name}. All rights reserved.</p>
-      <p>Serving Orange County and coastal Southern California.</p>
+      <p>Serving service companies across California.</p>
     </div>
   </div>
 </footer>

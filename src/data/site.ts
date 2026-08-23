@@ -22,20 +22,12 @@ export const site = {
 };
 
 export const navigation = [
-  { href: "/work/", label: "Work" },
-  { href: "/services/", label: "Services & Pricing" },
-  { href: "/about/", label: "About Jack" },
-  { href: "/process/", label: "Process" },
-  { href: "/#faq", label: "FAQs" },
-];
-
-export const footerNav = [
   { href: "/", label: "Home" },
-  { href: "/services/", label: "Services & Pricing" },
-  { href: "/work/", label: "Work" },
   { href: "/process/", label: "Process" },
-  { href: "/about/", label: "About Jack" },
-  { href: "/contact/", label: "Request Free Demo" },
+  { href: "/services/", label: "Pricing" },
+  { href: "/about/", label: "About" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 export const bundles = [
@@ -65,14 +57,6 @@ export const bundles = [
 
 export const demos = [
   {
-    trade: "Marine engine & electrical",
-    package: "Three-page package",
-    name: "Harbor Point Marine Works",
-    kicker: "Mobile repairs, clearly explained.",
-    theme: "teal",
-    url: "/demos/harbor-point/",
-  },
-  {
     trade: "Marine surveying",
     package: "Five-page package",
     name: "Meridian Marine Surveying",
@@ -89,27 +73,12 @@ export const demos = [
     url: "https://tidewater-hull-service.jackferrence11.chatgpt.site",
   },
   {
-    trade: "Pool service",
-    package: "Three-page package",
-    name: "Cobalt Pool Care",
-    kicker: "Recurring service made simple.",
-    theme: "blue",
-    url: "/demos/cobalt-pool/",
-  },
-  {
     trade: "HVAC contractor",
     package: "Five-page package",
     name: "Westline Air",
     kicker: "Clear options when comfort cannot wait.",
     theme: "orange",
     url: "/demos/westline-air/",
-  },
-  {
-    trade: "Mobile detailing",
-    package: "One-page package",
-    name: "Coastline Detail Co.",
-    kicker: "Premium work without the clutter.",
-    theme: "slate",
   },
 ];
 

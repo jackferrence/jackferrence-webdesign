@@ -1,25 +1,33 @@
 User-agent: *
 Allow: /
+Disallow: /demos/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /demos/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /demos/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /demos/
 
 User-agent: Claude-User
 Allow: /
+Disallow: /demos/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /demos/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /demos/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /demos/
 
 Sitemap: https://jackferrence.com/sitemap-index.xml

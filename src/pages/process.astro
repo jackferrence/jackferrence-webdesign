@@ -1,65 +1,96 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
+import DemoCard from "../components/DemoCard.astro";
 import PageHero from "../components/PageHero.astro";
+import { demos, site } from "../data/site";
 
 const steps = [
   {
     number: "01",
-    timing: "20 minutes",
-    title: "Talk to Jack",
-    text: "A short call covers what you do, who you serve, where referrals come from, and what is broken online now.",
-    result: "A clear recommendation and fixed scope.",
+    title: "You agree to a demo",
+    text: "No cost. No card. No contract. You are agreeing to twenty minutes on the phone and a look at what I build. Nothing more than that.",
   },
   {
     number: "02",
-    timing: "One short intake",
-    title: "Send the raw material",
-    text: "Share the service list, service area, phone number, logo, and any photos you already have. Bullet points are fine.",
-    result: "Jack has what he needs to write the site.",
+    title: "You answer the questions",
+    text: "One call, about twenty minutes. What you do, where you work, what you charge, what your license and insurance say, and which jobs you actually want more of. You do not write anything down. I do.",
   },
   {
     number: "03",
-    timing: "Within one week",
-    title: "Review the mockup",
-    text: "Jack turns the call and intake into the page structure, finished copy, and a visual direction you can react to.",
-    result: "One concrete site—not a vague mood board.",
+    title: "I build the site",
+    text: "Seven days. Copy written, pages built, structure set up so people searching for your work can find it. Real content, not lorem ipsum with your logo dropped in.",
   },
   {
     number: "04",
-    timing: "About two weeks later",
-    title: "Approve and launch",
-    text: "Jack builds the full site, handles the mobile details, connects the form and domain, and launches after your approval.",
-    result: "A live site and a person you can still call.",
+    title: "We walk through it together",
+    text: "Twenty minutes on Zoom. I show you the site, page by page, and explain why each part is there. You tell me what is wrong. Most of it will be right, because I asked the right questions in step two.",
+  },
+  {
+    number: "05",
+    title: "You choose what you want",
+    text: "Now you know exactly what you are buying, because you are looking at it. Pick the package. Add the Google Business Profile setup or leave it. Nothing is bundled in that you did not ask for.",
+  },
+  {
+    number: "06",
+    title: "Half down, and the clock starts",
+    text: "Fifty percent to begin. The two-week timeline starts when I have your answers and your photos, not the day you pay. Two rounds of revisions are included.",
+  },
+  {
+    number: "07",
+    title: "It goes live, then the balance",
+    text: "You approve it, it launches, and the remaining fifty percent is due. The site is yours. The domain is in your name. If you take the care plan, you have somebody to call. If you do not, you still own everything.",
   },
 ];
 ---
 
-<BaseLayout title="Process" description="A direct website process: 20-minute call, short intake, a custom mockup within one week, and launch about two weeks later. Copywriting included.">
-  <PageHero eyebrow="How it works" title="You explain the business. Jack writes and builds the site." intro="There is no content homework packet and no account manager translating your notes. The person on the first call is the person doing the work.">
-    <div class="mt-9 flex flex-wrap gap-3 text-xs font-extrabold uppercase tracking-[0.12em] text-white/58">
-      <span class="rounded-full border border-white/15 px-4 py-2">Copy included</span>
-      <span class="rounded-full border border-white/15 px-4 py-2">Fixed scope</span>
-      <span class="rounded-full border border-white/15 px-4 py-2">Direct communication</span>
+<BaseLayout title="How It Works" description="A demo-first website process: agree to a free demo, answer a few questions, and see a real site within seven days before you decide whether to pay for anything.">
+  <PageHero eyebrow="How it works" title="You will see your website before you pay for it." intro="Most people who call me have already been burned once. Money up front, six months of silence, a half-finished site nobody ever launched. So I built the process backwards. You get a real site first. You decide after.">
+    <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+      <a class="button button-accent" href="/services/">See the packages</a>
+      <a class="button button-ghost-light" href={site.phoneHref}>Call {site.phoneDisplay}</a>
     </div>
   </PageHero>
 
   <section class="section-pad bg-mist">
+    <div class="container grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-24">
+      <div>
+        <p class="eyebrow">The reason</p>
+        <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Nothing gets built while you wait on yourself.</h2>
+      </div>
+      <div class="max-w-2xl">
+        <p class="text-lg leading-relaxed text-slate">Website projects do not stall because the work is hard. They stall because the web guy asked you for content and you have a business to run.</p>
+        <p class="mt-5 text-base leading-relaxed text-slate">So I do not ask you for content. I ask you questions, once, and I write everything from your answers. Photos, copy, service pages, the Google listing. You approve it. You do not produce it.</p>
+        <p class="mt-5 text-base font-bold leading-relaxed text-navy">That is why two weeks is a real number and not a hope.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad border-y border-line bg-paper">
     <div class="container">
-      <div class="grid gap-0 border-y border-line">
+      <p class="eyebrow">Start to finish</p>
+      <h2 class="mt-6 max-w-2xl text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Seven steps. No mystery in any of them.</h2>
+      <ol class="mt-12 grid divide-y divide-line border-y border-line">
         {steps.map((step) => (
-          <article class="process-step">
-            <div class="flex items-center justify-between gap-4 lg:block">
-              <span class="step-number">{step.number}</span>
-              <p class="step-time">{step.timing}</p>
-            </div>
+          <li class="process-step">
+            <span>{step.number}</span>
             <div>
-              <h2>{step.title}</h2>
+              <h3>{step.title}</h3>
               <p>{step.text}</p>
             </div>
-            <div class="step-result"><span aria-hidden="true">✓</span><p>{step.result}</p></div>
-          </article>
+          </li>
         ))}
+      </ol>
+    </div>
+  </section>
+
+  <section class="section-pad bg-mist">
+    <div class="container">
+      <p class="eyebrow">See it before you decide</p>
+      <h2 class="mt-6 max-w-2xl text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">These went through this exact process.</h2>
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">Every demo below started as a twenty-minute call, not a blank page.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {demos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
       </div>
     </div>
   </section>
@@ -67,56 +98,23 @@ const steps = [
   <section class="section-pad border-y border-line bg-paper">
     <div class="container grid gap-12 lg:grid-cols-2 lg:gap-24">
       <div>
-        <p class="eyebrow">The client writes nothing</p>
-        <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Good website copy starts as a good conversation.</h2>
-        <p class="mt-6 text-lg leading-relaxed text-slate">You already know the work. Jack asks the questions, finds the useful details, and turns them into language a customer can understand.</p>
+        <p class="eyebrow">Just so it is said</p>
+        <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">No retainer to find out.</h2>
       </div>
-      <div class="rounded-2xl bg-navy p-7 text-white sm:p-10">
-        <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-accent">What to have ready</p>
-        <ul class="mt-7 grid gap-5">
-          <li class="ready-item"><span>01</span><div><strong>Your main services</strong><p>What you do—and what work you want more of.</p></div></li>
-          <li class="ready-item"><span>02</span><div><strong>Your service area</strong><p>The cities, marinas, or neighborhoods you actually cover.</p></div></li>
-          <li class="ready-item"><span>03</span><div><strong>Existing proof</strong><p>Reviews, licenses, credentials, photos, and years in the trade.</p></div></li>
-          <li class="ready-item"><span>04</span><div><strong>Basic business details</strong><p>Phone, hours, pricing guidance, logo if you have one.</p></div></li>
-        </ul>
-        <p class="mt-8 border-t border-white/15 pt-6 text-sm leading-relaxed text-white/58">No polished documents required. Texts, notes, screenshots, and a phone conversation are enough.</p>
+      <div class="max-w-2xl">
+        <p class="text-lg leading-relaxed text-slate">You are not paying a discovery fee. You are not signing a twelve-month contract to get a quote. You are not going to get a forty-page proposal with a number buried on page thirty-one.</p>
+        <p class="mt-5 text-base leading-relaxed text-slate">You get a real website in seven days, a straight conversation about it, and a price you already saw on the pricing page.</p>
+        <p class="mt-5 text-base font-bold leading-relaxed text-navy">If you look at it and decide no, that is a fine outcome. You keep the demo link. I keep the practice.</p>
       </div>
     </div>
   </section>
 
-  <section class="section-pad bg-mist">
-    <div class="container grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-      <div>
-        <p class="eyebrow">Timeline</p>
-        <h2 class="mt-6 text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Fast, with room for real feedback.</h2>
-      </div>
-      <div>
-        <p class="text-xl leading-relaxed text-navy">A typical three-page site reaches a finished mockup in week one and launches about two weeks later.</p>
-        <p class="mt-5 text-base leading-relaxed text-slate">The schedule assumes timely feedback and access to the domain or Google profile when needed. One-page sites can move faster; larger sites get the timeline shown on the services page.</p>
-        <a class="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-6" href="/services/">Compare package timelines <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-  </section>
-
-  <CTASection title="Twenty minutes is enough to start." text="Tell Jack what you do and where customers currently lose confidence. He will map the cleanest path from referral to call." />
+  <CTASection title="Start with the demo." text="Tell me what you do and where you work. Seven days later you will be looking at your own website, and you will not have spent anything." />
 </BaseLayout>
 
 <style>
-  .process-step { display: grid; gap: 1.5rem; border-bottom: 1px solid var(--color-line); padding-block: 2.1rem; }
-  .process-step:last-child { border-bottom: 0; }
-  .step-number { display: grid; width: 2.5rem; height: 2.5rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.7rem; font-weight: 700; }
-  .step-time { color: var(--color-sea); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; }
-  .process-step h2 { color: var(--color-navy); font-size: 1.75rem; font-weight: 700; letter-spacing: -0.04em; }
-  .process-step > div > p { margin-top: 0.65rem; max-width: 39rem; color: var(--color-slate); font-size: 0.9rem; line-height: 1.75; }
-  .step-result { display: flex; gap: 0.8rem; align-items: flex-start; border-left: 2px solid var(--color-sea); padding-left: 1rem; }
-  .step-result span { color: var(--color-sea); font-size: 0.8rem; font-weight: 700; }
-  .step-result p { color: var(--color-navy); font-size: 0.8rem; font-weight: 800; line-height: 1.6; }
-  .ready-item { display: grid; grid-template-columns: 2rem 1fr; gap: 1rem; align-items: flex-start; }
-  .ready-item > span { color: var(--color-accent); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; }
-  .ready-item strong { display: block; font-size: 0.95rem; font-weight: 700; }
-  .ready-item p { margin-top: 0.3rem; color: rgb(255 255 255 / 55%); font-size: 0.78rem; line-height: 1.55; }
-  @media (min-width: 1024px) {
-    .process-step { grid-template-columns: 0.45fr 1.1fr 0.65fr; align-items: center; gap: 3rem; padding-block: 2.6rem; }
-    .step-time { margin-top: 1rem; }
-  }
+  .process-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding-block: 1.8rem; }
+  .process-step span { display: inline-grid; height: 2.5rem; width: 2.5rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.72rem; font-weight: 700; }
+  .process-step h3 { color: var(--color-navy); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
+  .process-step p { margin-top: 0.5rem; max-width: 40rem; color: var(--color-slate); font-size: 0.92rem; line-height: 1.7; }
 </style>

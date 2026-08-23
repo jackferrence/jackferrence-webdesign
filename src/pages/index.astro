@@ -6,9 +6,6 @@ import { demoFaqs, demos, site } from "../data/site";
 
 const description = "Get a personalized website demo for your California service business in under seven days. No cost or commitment. Built directly by Jack Ferrence.";
 
-const homeDemoNames = ["Harbor Point Marine Works", "Cobalt Pool Care", "Westline Air"];
-const homeDemos = homeDemoNames.map((name) => demos.find((demo) => demo.name === name)!);
-
 const referralQuestions = ["What do you do?", "Where do you work?", "Why should someone trust you?", "What should they do next?"];
 ---
 
@@ -65,6 +62,21 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
     </div>
   </section>
 
+  <section class="section-pad bg-mist" id="demos">
+    <div class="container">
+      <div class="flex items-end justify-between gap-8">
+        <div>
+          <p class="eyebrow">Example demos</p>
+          <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Built around the way each service is actually sold.</h2>
+        </div>
+      </div>
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">A marine surveyor, hull service, and HVAC contractor should not sound or look identical. These are demonstration builds, not presented as completed client projects.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {demos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
+      </div>
+    </div>
+  </section>
+
   <section class="section-pad bg-navy text-white">
     <div class="container grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
       <div>
@@ -106,23 +118,6 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
         </div>
       </div>
       <a class="button button-accent mt-9" href="/contact/">Request My Free Demo <span aria-hidden="true">→</span></a>
-    </div>
-  </section>
-
-  <section class="section-pad bg-mist" id="demos">
-    <div class="container">
-      <div class="flex items-end justify-between gap-8">
-        <div>
-          <p class="eyebrow">Example demos</p>
-          <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Built around the way each service is actually sold.</h2>
-        </div>
-        <a class="hidden shrink-0 text-sm font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-6 sm:block" href="/work/">See all example demos →</a>
-      </div>
-      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">A marine mechanic, pool company, and HVAC contractor should not sound or look identical. These are demonstration builds, not presented as completed client projects.</p>
-      <div class="mt-12 grid gap-5 lg:grid-cols-3">
-        {homeDemos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
-      </div>
-      <a class="button button-outline mt-7 w-full sm:hidden" href="/work/">See all example demos</a>
     </div>
   </section>
 
@@ -212,7 +207,6 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
         <p class="eyebrow">Proof that earns its place</p>
         <h2 class="mt-4 text-balance text-3xl font-extrabold tracking-[-0.04em] sm:text-4xl">See the thinking. Then judge the work.</h2>
         <p class="mt-5 max-w-md text-base leading-relaxed text-white/70">Verified client results will appear here as they become available. Until then, the example demos above show the design decisions behind each build.</p>
-        <a class="mt-6 inline-flex items-center gap-2 text-sm font-extrabold text-white underline decoration-accent-bright decoration-2 underline-offset-6" href="/work/">See all example demos <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
