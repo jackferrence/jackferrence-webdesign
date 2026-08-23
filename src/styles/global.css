@@ -73,6 +73,10 @@
     padding-block: clamp(5rem, 9vw, 8.5rem);
   }
 
+  .section-pad-tight {
+    padding-block: clamp(3rem, 5vw, 5rem);
+  }
+
   .skip-link {
     position: fixed;
     z-index: 100;
@@ -244,6 +248,12 @@
   .package-card { position: relative; display: flex; min-height: 100%; flex-direction: column; border: 1px solid var(--color-line); border-radius: 1rem; background: var(--color-mist); padding: 1.6rem; box-shadow: 0 12px 40px rgb(11 29 42 / 4%); }
   .package-card-featured { border-color: rgb(201 43 14 / 48%); box-shadow: 0 20px 55px rgb(11 29 42 / 9%); }
   .package-badge { position: absolute; top: -0.7rem; left: 1.5rem; border-radius: 999px; background: var(--color-accent); padding: 0.38rem 0.72rem; color: white; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  .faq-item summary { display: flex; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.35rem; color: var(--color-navy); font-size: 1rem; font-weight: 900; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary i { display: grid; width: 1.8rem; height: 1.8rem; flex: none; place-items: center; border-radius: 999px; background: rgb(23 127 131 / 10%); color: var(--color-sea); font-size: 1.1rem; font-style: normal; transition: transform 150ms ease; }
+  .faq-item[open] summary i { transform: rotate(45deg); background: var(--color-accent); color: white; }
+  .faq-item p { max-width: 45rem; padding: 0 3.2rem 1.5rem 0; color: var(--color-slate); font-size: 0.92rem; line-height: 1.75; }
 
   .demo-card { overflow: hidden; border: 1px solid var(--color-line); border-radius: 1rem; background: white; box-shadow: 0 12px 35px rgb(11 29 42 / 4%); transition: transform 180ms ease, box-shadow 180ms ease; }
   .demo-card:hover { transform: translateY(-4px); box-shadow: 0 24px 55px rgb(11 29 42 / 10%); }

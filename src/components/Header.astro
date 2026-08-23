@@ -17,7 +17,7 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
     </a>
 
     <nav class="hidden items-center gap-7 lg:flex" aria-label="Primary navigation">
-      {navigation.slice(0, -1).map((item) => (
+      {navigation.map((item) => (
         <a class:list={["nav-link", { "nav-link-active": isActive(item.href) }]} href={item.href} aria-current={isActive(item.href) ? "page" : undefined}>
           {item.label}
         </a>
@@ -26,7 +26,7 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
 
     <div class="hidden items-center gap-3 lg:flex">
       <a class="text-sm font-bold text-navy transition-colors hover:text-accent" href={site.phoneHref}>Call {site.phoneDisplay}</a>
-      <a class="button button-small button-primary" href="/contact/">Start a project</a>
+      <a class="button button-small button-primary" href="/contact/">Request Free Demo</a>
     </div>
 
     <details class="mobile-menu lg:hidden">
@@ -41,6 +41,10 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
             </a>
           ))}
         </nav>
+        <div class="mt-5 flex flex-col gap-3">
+          <a class="button button-primary" href="/contact/">Request Free Demo</a>
+          <a class="button button-outline" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+        </div>
       </div>
     </details>
   </div>

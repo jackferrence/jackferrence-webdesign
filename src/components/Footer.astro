@@ -1,5 +1,5 @@
 ---
-import { navigation, site } from "../data/site";
+import { footerNav, site } from "../data/site";
 const year = new Date().getFullYear();
 ---
 
@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
       <div>
         <p class="footer-heading">Pages</p>
         <nav class="mt-5 grid gap-3" aria-label="Footer navigation">
-          {navigation.map((item) => <a class="footer-link" href={item.href}>{item.label}</a>)}
+          {footerNav.map((item) => <a class="footer-link" href={item.href}>{item.label}</a>)}
         </nav>
       </div>
       <div>

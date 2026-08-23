@@ -2,35 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
 import DemoCard from "../components/DemoCard.astro";
-import PackageCard from "../components/PackageCard.astro";
-import { bundles, demos, faqs, site } from "../data/site";
+import { demoFaqs, demos, site } from "../data/site";
 
-const description = "Fast websites and Google Business Profile setup for owner-operated service companies across Orange County and coastal Southern California.";
+const description = "Get a personalized website demo for your California service business in under seven days. No cost or commitment. Built directly by Jack Ferrence.";
 
 const homeDemoNames = ["Harbor Point Marine Works", "Cobalt Pool Care", "Westline Air"];
 const homeDemos = homeDemoNames.map((name) => demos.find((demo) => demo.name === name)!);
 
-const homeFaqQuestions = ["Can you guarantee where I rank on Google?", "How does payment work?", "Will I own the site and domain?"];
-const homeFaqs = homeFaqQuestions.map((question) => faqs.find((faq) => faq.question === question)!);
+const referralQuestions = ["What do you do?", "Where do you work?", "Why should someone trust you?", "What should they do next?"];
 ---
 
-<BaseLayout title={site.name} description={description}>
+<BaseLayout title="Websites for California Service Companies" description={description}>
   <section class="relative overflow-hidden bg-mist py-16 sm:py-24 lg:py-30">
     <div class="container grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
       <div>
-        <p class="eyebrow">Websites for service companies in SoCal</p>
+        <p class="eyebrow">Websites for service companies in California</p>
         <h1 class="mt-7 max-w-3xl text-balance text-[clamp(3.5rem,8vw,6.7rem)] font-black leading-[0.89] tracking-[-0.07em] text-navy">
-          Turn the name they heard into the <span class="text-accent">call you get.</span>
+          See your new website <span class="text-accent">before you pay for it.</span>
         </h1>
         <p class="mt-8 max-w-xl text-lg leading-relaxed text-slate sm:text-xl">
-          Fast websites, a claimed Google listing, and one person who stays reachable when something needs attention.
+          Jack creates a personalized website demo for your service business in under seven days. No cost. No commitment. If you like the direction, he can finish and launch the site.
         </p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a class="button button-primary hidden sm:inline-flex" href="/contact/">Build my site <span aria-hidden="true">→</span></a>
-          <a class="button button-outline" href="/services/">See packages and prices</a>
+          <a class="button button-primary" href="/contact/">Request My Free Demo <span aria-hidden="true">→</span></a>
+          <a class="button button-outline" href="#demos">See Example Demos</a>
         </div>
         <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-t border-line pt-6 text-xs font-extrabold uppercase tracking-[0.1em] text-slate">
-          <span>Based in Newport Beach</span><span>Copy included</span><span>Direct support</span>
+          <span>Personalized to your business</span><span>Delivered in under 7 days</span><span>Built by Jack</span>
         </div>
       </div>
 
@@ -46,7 +44,7 @@ const homeFaqs = homeFaqQuestions.map((question) => faqs.find((faq) => faq.quest
           </div>
           <ol class="mt-4 grid">
             <li class="referral-step">
-              <span>01</span><div><b>They hear your name</b><p>A neighbor, dockmaster, or customer recommends you.</p></div><i class="bg-sea"></i>
+              <span>01</span><div><b>They hear your name</b><p>A neighbor, property owner, or past customer recommends you.</p></div><i class="bg-sea"></i>
             </li>
             <li class="referral-step">
               <span>02</span><div><b>They search for you</b><p>Your online presence has a few seconds to confirm the referral.</p></div><i class="bg-accent"></i>
@@ -55,7 +53,7 @@ const homeFaqs = homeFaqQuestions.map((question) => faqs.find((faq) => faq.quest
               <span>03</span><div><b>They decide who looks real</b><p>Clear services, real proof, and an easy next step win the call.</p></div><i class="bg-sea"></i>
             </li>
             <li class="referral-step border-b-0">
-              <span>04</span><div><b>Your phone rings</b><p>The site did its job. You take it from there.</p></div><i class="bg-navy"></i>
+              <span>04</span><div><b>Your customer calls</b><p>The site did its job. You take it from there.</p></div><i class="bg-navy"></i>
             </li>
           </ol>
           <a class="mt-3 flex items-center justify-between rounded-xl bg-navy p-5 text-white" href={site.phoneHref}>
@@ -71,90 +69,172 @@ const homeFaqs = homeFaqQuestions.map((question) => faqs.find((faq) => faq.quest
     <div class="container grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
       <div>
         <p class="eyebrow">The referral leak</p>
-        <h2 class="mt-6 text-balance text-4xl font-black leading-[1] tracking-[-0.05em] sm:text-5xl">A good reputation can still lose the job.</h2>
+        <h2 class="mt-6 text-balance text-4xl font-black leading-[1] tracking-[-0.05em] sm:text-5xl">Good work can still lose the call online.</h2>
       </div>
       <div class="max-w-2xl">
-        <p class="text-xl leading-relaxed text-white/78 sm:text-2xl">Someone hears your name, searches it, finds nothing useful, and calls the next company that looks easier to trust.</p>
-        <p class="mt-6 text-base leading-relaxed text-white/58">You do not need a giant marketing machine. You need a fast site that explains the work, a Google profile that shows up, and a clear way for the right customer to reach you.</p>
-        <div class="mt-9 grid gap-4 sm:grid-cols-3">
-          <div class="value-chip"><strong>Fast</strong><span>No template bloat.</span></div>
-          <div class="value-chip"><strong>Clear</strong><span>No agency jargon.</span></div>
-          <div class="value-chip"><strong>Reachable</strong><span>Jack answers.</span></div>
-        </div>
+        <p class="text-xl leading-relaxed text-white/78 sm:text-2xl">A customer hears your name from a neighbor, property owner, or past client. Then they search for you.</p>
+        <p class="mt-6 text-base leading-relaxed text-white/58">If they find no website, an outdated page, or no clear way to request service, the referral does not disappear—it often goes to the next company that looks easier to trust. Your website does not need to be complicated. It needs to quickly answer four questions:</p>
+        <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+          {referralQuestions.map((question) => (
+            <li class="flex items-start gap-3 text-sm font-bold text-white/90">
+              <span class="mt-0.5 text-accent-bright" aria-hidden="true">→</span>{question}
+            </li>
+          ))}
+        </ul>
+        <p class="mt-8 text-base font-bold leading-relaxed text-white">Your reputation already did the hard part. Your website should help it finish the job.</p>
       </div>
     </div>
   </section>
 
-  <section class="section-pad bg-paper" id="packages">
+  <section class="section-pad bg-paper">
     <div class="container">
-      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-        <div>
-          <p class="eyebrow">Website packages</p>
-          <h2 class="mt-6 max-w-3xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">A clear scope. A real price. No mystery proposal.</h2>
+      <p class="eyebrow">See the direction first</p>
+      <h2 class="mt-6 max-w-3xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">A website concept made for your business—not a generic sales pitch.</h2>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate">Tell Jack about your services, customers, and location. He will create a personalized website demo that shows how your business could be presented online. You see the messaging, page direction, and customer path before deciding whether to spend anything.</p>
+      <div class="mt-10 flex flex-col divide-y divide-line rounded-2xl border border-line bg-white sm:flex-row sm:divide-x sm:divide-y-0">
+        <div class="flex-1 p-6">
+          <h3 class="text-xs font-black uppercase tracking-[0.12em] text-sea">Personalized</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Built around your actual services, service area, and business identity.</p>
         </div>
-        <a class="mb-2 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6" href="/services/">See every service and bundle →</a>
+        <div class="flex-1 p-6">
+          <h3 class="text-xs font-black uppercase tracking-[0.12em] text-sea">Fast</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Delivered in under seven days after Jack receives the information he needs.</p>
+        </div>
+        <div class="flex-1 p-6">
+          <h3 class="text-xs font-black uppercase tracking-[0.12em] text-sea">No pressure</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Review the demo first. Decide afterward whether a paid build makes sense.</p>
+        </div>
       </div>
-      <div class="mt-12 grid gap-5 lg:grid-cols-3">
-        {bundles.map((item) => <PackageCard {...item} />)}
-      </div>
+      <a class="button button-accent mt-9" href="/contact/">Request My Free Demo <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
-  <section class="section-pad border-y border-line bg-mist">
-    <div class="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center lg:gap-20">
-      <div>
-        <p class="eyebrow">After launch</p>
-        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">You should still know who to call.</h2>
-        <p class="mt-6 max-w-lg text-lg leading-relaxed text-slate">The site is yours. The care plan is optional. Either way, you are not opening a support ticket with a stranger.</p>
+  <section class="section-pad bg-mist" id="demos">
+    <div class="container">
+      <div class="flex items-end justify-between gap-8">
+        <div>
+          <p class="eyebrow">Example demos</p>
+          <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Built around the way each service is actually sold.</h2>
+        </div>
+        <a class="hidden shrink-0 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6 sm:block" href="/work/">See all example demos →</a>
       </div>
-      <div class="grid gap-4 sm:grid-cols-2">
-        <article class="rounded-2xl border border-line bg-white p-7 shadow-sm">
-          <div class="flex items-end justify-between gap-4"><h3 class="text-2xl font-black tracking-tight">Care</h3><p class="text-xl font-black text-accent">$100<span class="text-xs text-slate">/mo</span></p></div>
-          <p class="mt-5 text-sm leading-relaxed text-slate">Core maintenance, uptime checks, priority response, and up to 45 minutes of content updates each month.</p>
-        </article>
-        <article class="relative rounded-2xl border border-sea/35 bg-white p-7 shadow-sm">
-          <span class="absolute -top-3 left-6 rounded-full bg-sea px-3 py-1 text-[0.65rem] font-black uppercase tracking-[0.12em] text-white">Recommended</span>
-          <div class="flex items-end justify-between gap-4"><h3 class="text-2xl font-black tracking-tight">Care+</h3><p class="text-xl font-black text-sea">$175<span class="text-xs text-slate">/mo</span></p></div>
-          <p class="mt-5 text-sm leading-relaxed text-slate">Everything in Care, up to 90 minutes of updates, quarterly Google profile review, and faster turnaround.</p>
-        </article>
-        <p class="sm:col-span-2 mt-1 text-sm font-bold text-slate">Prefer occasional help? À la carte updates are $80/hour.</p>
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">A marine mechanic, pool company, and HVAC contractor should not sound or look identical. These are demonstration builds, not presented as completed client projects.</p>
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {homeDemos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
+      </div>
+      <a class="button button-outline mt-7 w-full sm:hidden" href="/work/">See all example demos</a>
+    </div>
+  </section>
+
+  <section class="section-pad bg-paper">
+    <div class="container grid gap-14 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
+      <div>
+        <p class="eyebrow">Built by someone who gets both sides</p>
+        <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Technical enough to build it right. Practical enough to keep it useful.</h2>
+      </div>
+      <div class="max-w-2xl">
+        <p class="text-lg leading-relaxed text-slate">Jack Ferrence has a B.S. in Computer Science from Biola University and firsthand experience running a pressure-washing service business. He understands that a service website is not an art project—it is a tool that should make the business look credible and help the right customer take action.</p>
+        <p class="mt-5 text-base leading-relaxed text-slate">You work directly with Jack from the first conversation through launch. He writes the site, builds it, and stays reachable when something needs attention.</p>
+        <ul class="mt-7 grid gap-3 sm:grid-cols-2">
+          <li class="flex items-start gap-3 text-sm font-bold text-navy"><span class="mt-0.5 text-sea" aria-hidden="true">✓</span>B.S. in Computer Science, Biola University</li>
+          <li class="flex items-start gap-3 text-sm font-bold text-navy"><span class="mt-0.5 text-sea" aria-hidden="true">✓</span>Firsthand service-business experience</li>
+          <li class="flex items-start gap-3 text-sm font-bold text-navy"><span class="mt-0.5 text-sea" aria-hidden="true">✓</span>Based in Newport Beach, serving California</li>
+          <li class="flex items-start gap-3 text-sm font-bold text-navy"><span class="mt-0.5 text-sea" aria-hidden="true">✓</span>Direct access to the person doing the work</li>
+        </ul>
+        <a class="mt-8 inline-flex items-center gap-2 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6" href="/about/">About Jack <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
 
   <section class="section-pad bg-mist">
     <div class="container">
-      <div class="flex items-end justify-between gap-8">
-        <div>
-          <p class="eyebrow">Selected concepts</p>
-          <h2 class="mt-6 text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Built for the way local service work is actually sold.</h2>
-        </div>
-        <a class="hidden shrink-0 text-sm font-black text-navy underline decoration-accent decoration-2 underline-offset-6 sm:block" href="/work/">View all demo builds →</a>
-      </div>
-      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">These are demonstration builds created to show the strategy, hierarchy, and conversion approach for different trades—not presented as completed client work.</p>
+      <p class="eyebrow">How it works</p>
+      <h2 class="mt-6 max-w-2xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">See the work before you make the decision.</h2>
       <div class="mt-12 grid gap-5 lg:grid-cols-3">
-        {homeDemos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
+        <article class="plan-step">
+          <span>01</span>
+          <h3>Tell Jack about the business</h3>
+          <p>Share your services, location, current website if you have one, and what you want customers to do.</p>
+        </article>
+        <article class="plan-step">
+          <span>02</span>
+          <h3>Review your free demo</h3>
+          <p>Within seven days, Jack sends a personalized website direction built around your business.</p>
+        </article>
+        <article class="plan-step">
+          <span>03</span>
+          <h3>Choose what happens next</h3>
+          <p>If the direction fits, choose a website package and Jack finishes the build. If not, you are not committed.</p>
+        </article>
       </div>
-      <a class="button button-outline mt-7 w-full sm:hidden" href="/work/">View all demo builds</a>
+      <a class="button button-primary mt-9" href="/contact/">Request My Free Demo <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
-  <section class="section-pad border-y border-line bg-paper">
+  <section class="section-pad bg-paper">
     <div class="container">
-      <p class="eyebrow">Before you commit</p>
-      <h2 class="mt-6 max-w-2xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">The three questions worth answering upfront.</h2>
-      <div class="mt-12 grid gap-5 lg:grid-cols-3">
-        {homeFaqs.map((faq) => (
-          <article class="rounded-2xl border border-line bg-white p-7 shadow-sm">
-            <h3 class="text-lg font-black tracking-[-0.02em] text-navy">{faq.question}</h3>
-            <p class="mt-3 text-sm leading-relaxed text-slate">{faq.answer}</p>
-          </article>
+      <p class="eyebrow">More than a good-looking page</p>
+      <h2 class="mt-6 max-w-2xl text-balance text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">The pieces customers need to find you, trust you, and contact you.</h2>
+      <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate">The website is the core offer. When needed, Jack can also help put the supporting basics in place so the site works as part of one clear customer path.</p>
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+        <article class="rounded-2xl border border-navy/15 bg-navy p-7 text-white lg:row-span-3">
+          <p class="text-xs font-black uppercase tracking-[0.12em] text-accent-bright">The core offer</p>
+          <h3 class="mt-3 text-xl font-black tracking-[-0.02em]">Sales website</h3>
+          <ul class="mt-5 grid gap-3 text-sm font-semibold text-white/85">
+            <li>✓ Clear service and location messaging</li><li>✓ Mobile-first pages</li><li>✓ Calls and quote-request paths</li><li>✓ Copywriting included</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="text-base font-black tracking-[-0.02em] text-navy">Google Business Profile setup</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Set up or organize the profile customers use to find and verify your business on Google.</p>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="text-base font-black tracking-[-0.02em] text-navy">Review request system</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Give satisfied customers a clear, repeatable way to leave a review.</p>
+        </article>
+        <article class="rounded-2xl border border-line bg-white p-6">
+          <h3 class="text-base font-black tracking-[-0.02em] text-navy">On-site photo session</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Capture real work, equipment, and locations so the site looks like your business.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad-tight bg-navy text-white">
+    <div class="container grid gap-10 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <p class="eyebrow">If you decide to build</p>
+        <h2 class="mt-4 text-balance text-3xl font-black tracking-[-0.04em] sm:text-4xl">Clear packages after you have seen the direction.</h2>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-white/70">The personalized demo is free. If you want Jack to complete and launch the site, current website packages range from <strong class="text-white">$1,400 to $3,300</strong>.</p>
+        <a class="button button-accent mt-6" href="/services/">See Packages and Prices <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="border-t border-white/15 pt-8 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0">
+        <p class="eyebrow">Proof that earns its place</p>
+        <h2 class="mt-4 text-balance text-3xl font-black tracking-[-0.04em] sm:text-4xl">See the thinking. Then judge the work.</h2>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-white/70">Verified client results will appear here as they become available. Until then, the example demos above show the design decisions behind each build.</p>
+        <a class="mt-6 inline-flex items-center gap-2 text-sm font-black text-white underline decoration-accent-bright decoration-2 underline-offset-6" href="/work/">See all example demos <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad bg-mist" id="faq">
+    <div class="container grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
+      <div>
+        <p class="eyebrow">Before you request a demo</p>
+        <h2 class="mt-6 text-4xl font-black tracking-[-0.05em] text-navy sm:text-5xl">Straight answers before you share your information.</h2>
+      </div>
+      <div class="divide-y divide-line border-y border-line">
+        {demoFaqs.map((item, index) => (
+          <details class="faq-item" open={index === 0}>
+            <summary><span>{item.question}</span><i aria-hidden="true">+</i></summary>
+            <p>{item.answer}</p>
+          </details>
         ))}
       </div>
     </div>
   </section>
 
-  <CTASection />
+  <CTASection title="See what your business could look like online." text="Tell Jack what you do, where you work, and what is not working today. He will review the fit and create a personalized website demo in under seven days." />
 </BaseLayout>
 
 <style>
@@ -163,7 +243,8 @@ const homeFaqs = homeFaqQuestions.map((question) => faqs.find((faq) => faq.quest
   .referral-step b { display: block; font-size: 0.9rem; color: var(--color-navy); }
   .referral-step p { margin-top: 0.25rem; max-width: 22rem; font-size: 0.72rem; line-height: 1.5; color: var(--color-slate); }
   .referral-step i { width: 0.55rem; height: 0.55rem; border-radius: 999px; }
-  .value-chip { border: 1px solid rgb(255 255 255 / 13%); border-radius: 0.75rem; padding: 1rem; }
-  .value-chip strong { display: block; color: white; font-size: 0.9rem; }
-  .value-chip span { display: block; margin-top: 0.35rem; color: rgb(255 255 255 / 52%); font-size: 0.72rem; }
+  .plan-step { border-top: 2px solid var(--color-navy); padding-top: 1.1rem; }
+  .plan-step span { display: inline-grid; height: 2.25rem; width: 2.25rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.7rem; font-weight: 900; }
+  .plan-step h3 { margin-top: 1rem; color: var(--color-navy); font-size: 1.15rem; font-weight: 900; letter-spacing: -0.025em; }
+  .plan-step p { margin-top: 0.6rem; color: var(--color-slate); font-size: 0.87rem; line-height: 1.7; }
 </style>

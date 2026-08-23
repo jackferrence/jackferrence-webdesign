@@ -48,11 +48,11 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout title="Services & pricing" description="Straightforward pricing for websites, Google Business Profile setup, business email, photography, review systems, and ongoing care." structuredData={[serviceSchema, faqSchema]}>
-  <PageHero eyebrow="Services & pricing" title="Buy the pieces you need—or bundle the whole local presence." intro="The work is scoped up front, the prices are public, and copywriting is built in. No retainer is required to launch a site.">
+<BaseLayout title="Service Business Website Packages" description="Compare website packages, Google Business Profile setup, review systems, photography, and domain email help for California service companies." structuredData={[serviceSchema, faqSchema]}>
+  <PageHero eyebrow="Services & pricing" title="Buy the pieces you need—or bundle the whole local presence." intro="Start with a free personalized demo. These are the packages and prices if you decide to have Jack finish and launch the site.">
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
       <a class="button button-accent" href="#bundles">Compare bundles <span aria-hidden="true">↓</span></a>
-      <a class="button button-ghost-light" href="/contact/">Ask Jack what fits</a>
+      <a class="button button-ghost-light" href="/contact/">Request My Free Demo</a>
     </div>
   </PageHero>
 
@@ -119,6 +119,7 @@ const faqSchema = {
           <p><strong>À la carte support</strong><span class="mt-1 block text-sm text-white/60">For updates without a monthly plan.</span></p>
           <p class="text-xl font-black">$80/hour</p>
         </div>
+        <p class="sm:col-span-2 text-sm text-slate">Already on a Care plan? Reach the support line directly at <a class="font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.supportEmailHref}>{site.supportEmail}</a>.</p>
       </div>
     </div>
   </section>
@@ -143,11 +144,3 @@ const faqSchema = {
 
   <CTASection title="Not sure which scope fits?" text="A 20-minute call is enough to sort out what is actually missing. Jack will recommend the smallest package that solves the problem." />
 </BaseLayout>
-
-<style>
-  .faq-item summary { display: flex; cursor: pointer; list-style: none; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.35rem; color: var(--color-navy); font-size: 1rem; font-weight: 900; }
-  .faq-item summary::-webkit-details-marker { display: none; }
-  .faq-item summary i { display: grid; width: 1.8rem; height: 1.8rem; flex: none; place-items: center; border-radius: 999px; background: rgb(23 127 131 / 10%); color: var(--color-sea); font-size: 1.1rem; font-style: normal; transition: transform 150ms ease; }
-  .faq-item[open] summary i { transform: rotate(45deg); background: var(--color-accent); color: white; }
-  .faq-item p { max-width: 45rem; padding: 0 3.2rem 1.5rem 0; color: var(--color-slate); font-size: 0.92rem; line-height: 1.75; }
-</style>

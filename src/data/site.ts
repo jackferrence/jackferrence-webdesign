@@ -1,71 +1,55 @@
 export const site = {
   name: "Jack Ferrence",
   legalName: "Jack Ferrence Web Design",
-  tagline: "Websites for service companies in SoCal.",
+  tagline: "Websites for California service companies.",
   description:
-    "Fast websites and Google Business Profile setup for owner-operated service companies across Orange County and coastal Southern California.",
+    "Fast websites and Google Business Profile setup for owner-operated service companies across California, based in Newport Beach.",
   url: "https://jackferrence.com",
-  phoneDisplay: "(702) 817-8753",
-  phoneHref: "tel:+17028178753",
-  email: "jackferrence11@gmail.com",
-  emailHref: "mailto:jackferrence11@gmail.com",
+  phoneDisplay: "(949) 414-6804",
+  phoneHref: "tel:+19494146804",
+  email: "hello@jackferrence.com",
+  emailHref: "mailto:hello@jackferrence.com",
+  supportEmail: "support@jackferrence.com",
+  supportEmailHref: "mailto:support@jackferrence.com",
   location: "Newport Beach, California",
   linkedin: "https://www.linkedin.com/in/jackferrence",
   github: "https://github.com/jack-ferrence",
   serviceAreas: [
+    "California",
     "Newport Beach",
-    "Costa Mesa",
-    "Huntington Beach",
-    "Laguna Beach",
-    "Dana Point",
     "Orange County",
     "Coastal Southern California",
   ],
 };
 
 export const navigation = [
-  { href: "/", label: "Home" },
-  { href: "/services/", label: "Services" },
   { href: "/work/", label: "Work" },
+  { href: "/services/", label: "Services & Pricing" },
+  { href: "/about/", label: "About Jack" },
   { href: "/process/", label: "Process" },
-  { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
+  { href: "/#faq", label: "FAQs" },
 ];
 
-export const packages = [
-  {
-    name: "One-page site",
-    price: "$900",
-    timeline: "1 week",
-    description: "A focused site that makes the business clear and gets the call.",
-    features: ["Custom mobile-first design", "Copywriting included", "Lead form + tap-to-call", "Local SEO foundation"],
-  },
-  {
-    name: "Three-page site",
-    price: "$1,600",
-    timeline: "2 weeks",
-    description: "More room for the work, the proof, and the service details buyers need.",
-    features: ["Home + two focused pages", "Copywriting included", "Lead form + tap-to-call", "Local SEO foundation"],
-    featured: true,
-  },
-  {
-    name: "Five-page site",
-    price: "$2,400",
-    timeline: "3 weeks",
-    description: "A complete local presence for businesses with several valuable services.",
-    features: ["Five custom pages", "Copywriting included", "Lead form + tap-to-call", "Expanded service SEO"],
-  },
+export const footerNav = [
+  { href: "/", label: "Home" },
+  { href: "/services/", label: "Services & Pricing" },
+  { href: "/work/", label: "Work" },
+  { href: "/process/", label: "Process" },
+  { href: "/about/", label: "About Jack" },
+  { href: "/contact/", label: "Request Free Demo" },
 ];
 
 export const bundles = [
   {
     name: "Dock",
+    timeline: "One-page website",
     price: "$1,400",
     note: "Get found and look legitimate.",
     includes: ["One-page website", "Google Business Profile setup", "Domain + business email setup", "All copywriting"],
   },
   {
     name: "Harbor",
+    timeline: "Three-page website",
     price: "$2,400",
     note: "The strongest fit for most owner-operators.",
     includes: ["Three-page website", "Google Business Profile setup", "Domain + business email setup", "Review request system", "On-site photo session", "All copywriting"],
@@ -73,6 +57,7 @@ export const bundles = [
   },
   {
     name: "Full Slip",
+    timeline: "Five-page website",
     price: "$3,300",
     note: "A complete local lead system.",
     includes: ["Five-page website", "One extra service landing page", "Google Business Profile setup", "Domain + business email setup", "Review request system", "On-site photo session", "All copywriting"],
@@ -124,6 +109,29 @@ export const demos = [
     name: "Coastline Detail Co.",
     kicker: "Premium work without the clutter.",
     theme: "slate",
+  },
+];
+
+export const demoFaqs = [
+  {
+    question: "What exactly is the free demo?",
+    answer:
+      "Jack creates a personalized website direction using details about your business, services, service area, and brand. You see the messaging, page structure, and customer path before deciding whether to spend anything.",
+  },
+  {
+    question: "Is there really no commitment?",
+    answer:
+      "Yes. You review the demo, then decide whether a paid build makes sense. Requesting or receiving the demo does not obligate you to hire Jack.",
+  },
+  {
+    question: "How quickly will I receive it?",
+    answer:
+      "Jack delivers the demo in under seven days after he has the information and materials needed to start.",
+  },
+  {
+    question: "What do you need from me to get started?",
+    answer:
+      "Your business name, services, service area, current website if you have one, and what you want the new site to help customers do. Existing logos and photos help but are not required to begin.",
   },
 ];
 
