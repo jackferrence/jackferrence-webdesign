@@ -4,21 +4,40 @@ import PageHero from "../components/PageHero.astro";
 import { site } from "../data/site";
 ---
 
-<BaseLayout title="Request a Free Website Demo" description="Tell Jack about your service business and receive a personalized website demo in under seven days. No cost, no commitment, and no automated sales funnel.">
-  <PageHero eyebrow="Request Free Demo" title="Tell Jack enough to personalize your free demo." intro="This takes about two minutes. Jack will review the request and follow up directly if the business is a fit." />
+<BaseLayout title="Call, Book a Call, or Request a Demo" description="Call Jack directly, book a call, or request a free personalized website demo for your California service business in under seven days. No cost, no commitment.">
+  <PageHero eyebrow="Get started" title="Call now, book a call, or request a demo." intro="Three ways in, all go straight to Jack. Pick whichever fits how you like to start." />
 
-  <section class="section-pad bg-mist">
+  <section class="section-pad-tight bg-mist">
+    <div class="container">
+      <div class="grid gap-5 lg:grid-cols-3">
+        <a class="contact-door contact-door-phone" href={site.phoneHref}>
+          <p class="contact-door-label">Fastest</p>
+          <h2 class="contact-door-title">Call Now</h2>
+          <p class="contact-door-text">Talk to Jack directly. If he is on another call or at a jobsite, leave the business name and he will get back to you.</p>
+          <span class="contact-door-cta">{site.phoneDisplay}</span>
+        </a>
+        <a class="contact-door contact-door-book" href="#book-a-call">
+          <p class="contact-door-label">Prefer to talk it through</p>
+          <h2 class="contact-door-title">Book a Call</h2>
+          <p class="contact-door-text">Answer a few questions here first. Jack reviews them and calls you back to walk through the fit.</p>
+          <span class="contact-door-cta">Book a Call <span aria-hidden="true">↓</span></span>
+        </a>
+        <a class="contact-door contact-door-demo" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">
+          <p class="contact-door-label">Prefer to type it out</p>
+          <h2 class="contact-door-title">Request a Demo</h2>
+          <p class="contact-door-text">Same questions, your own pace. Fill it out whenever works and Jack starts from your answers—no call needed.</p>
+          <span class="contact-door-cta">Request a Demo <span aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="book-a-call" class="section-pad-tight border-t border-line bg-paper">
     <div class="container grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
       <aside>
-        <p class="eyebrow">Talk directly</p>
-        <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy">Prefer the phone?</h2>
-        <p class="mt-5 max-w-md text-base leading-relaxed text-slate">Call Jack. If he is on another call or at a jobsite, leave the business name and he will get back to you.</p>
-        <a class="mt-7 inline-flex items-center gap-4 rounded-xl bg-navy px-5 py-4 text-white shadow-lg" href={site.phoneHref}>
-          <span class="grid h-11 w-11 place-items-center rounded-full bg-accent" aria-hidden="true">
-            <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M7.2 2.8 4.6 4.2c-.8.4-1.2 1.3-1 2.2 1.1 6.8 6.4 12.1 13.2 13.2.9.2 1.8-.2 2.2-1l1.4-2.6c.4-.8.2-1.8-.6-2.3l-2.9-1.9c-.7-.4-1.6-.3-2.1.3l-1.6 1.7a13 13 0 0 1-3-3l1.7-1.6c.6-.5.7-1.4.3-2.1l-1.9-2.9c-.5-.8-1.5-1-2.3-.6Z" /></svg>
-          </span>
-          <span><small class="block text-[10px] font-extrabold uppercase tracking-[0.14em] text-white/55">Tap to call</small><b class="mt-1 block text-lg">{site.phoneDisplay}</b></span>
-        </a>
+        <p class="eyebrow">Book a call</p>
+        <h2 class="mt-6 text-balance text-3xl font-extrabold tracking-[-0.05em] text-navy">Tell Jack enough to book your call.</h2>
+        <p class="mt-5 max-w-md text-base leading-relaxed text-slate">Fill this out and Jack reviews it before calling you back—so the call itself is short and useful instead of a first introduction.</p>
         <p class="mt-4 text-sm text-slate">Or email <a class="font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.emailHref}>{site.email}</a></p>
 
         <div class="mt-10 border-t border-line pt-7">
@@ -27,15 +46,15 @@ import { site } from "../data/site";
         </div>
         <div class="mt-7 border-t border-line pt-7">
           <p class="text-xs font-extrabold uppercase tracking-[0.15em] text-sea">What happens next</p>
-          <p class="mt-4 text-sm leading-relaxed text-slate">Jack reviews the details and follows up directly. If it looks like a fit, he begins your personalized demo—delivered in under seven days.</p>
+          <p class="mt-4 text-sm leading-relaxed text-slate">Jack reviews the details and calls you back directly. If it looks like a fit, he begins your personalized demo—delivered in under seven days.</p>
         </div>
       </aside>
 
-      <div class="rounded-2xl border border-line bg-paper p-6 shadow-[0_24px_70px_rgba(11,29,42,0.08)] sm:p-9 lg:p-12">
+      <div class="rounded-2xl border border-line bg-mist p-6 shadow-[0_24px_70px_rgba(11,29,42,0.08)] sm:p-9 lg:p-12">
         <div class="flex items-center justify-between gap-4 border-b border-line pb-7">
           <div>
-            <p class="text-xs font-extrabold uppercase tracking-[0.15em] text-accent">Free demo request</p>
-            <h2 class="mt-2 text-2xl font-extrabold tracking-[-0.035em] text-navy">Tell Jack enough to personalize your demo.</h2>
+            <p class="text-xs font-extrabold uppercase tracking-[0.15em] text-accent">Book a call</p>
+            <h2 class="mt-2 text-2xl font-extrabold tracking-[-0.035em] text-navy">Tell Jack enough to book your call.</h2>
           </div>
           <span class="hidden text-xs font-bold text-slate sm:block">Usually 2 minutes</span>
         </div>
@@ -102,10 +121,67 @@ import { site } from "../data/site";
 
           <div class="flex flex-col gap-4 border-t border-line pt-7 sm:flex-row sm:items-center sm:justify-between">
             <p class="max-w-xs text-xs leading-relaxed text-slate">Your information goes directly to Jack and is used only to respond to this request.</p>
-            <button class="button button-accent sm:min-w-48" type="submit">Request My Free Demo <span aria-hidden="true">→</span></button>
+            <button class="button button-accent sm:min-w-48" type="submit">Book a Call <span aria-hidden="true">→</span></button>
           </div>
         </form>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .contact-door {
+    position: relative;
+    display: flex;
+    min-height: 15rem;
+    flex-direction: column;
+    gap: 0.85rem;
+    border-radius: 1.25rem;
+    padding: 2.3rem 2rem;
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 220ms ease, border-color 220ms ease;
+  }
+
+  .contact-door:hover { transform: translateY(-4px); }
+
+  .contact-door-phone {
+    background: var(--color-accent);
+    color: white;
+    box-shadow: 0 20px 50px rgb(201 43 14 / 26%);
+  }
+
+  .contact-door-phone:hover { box-shadow: 0 26px 64px rgb(201 43 14 / 36%); }
+
+  .contact-door-book {
+    background: var(--color-navy);
+    color: white;
+    box-shadow: 0 20px 50px rgb(11 29 42 / 22%);
+  }
+
+  .contact-door-book:hover { box-shadow: 0 26px 64px rgb(11 29 42 / 32%); }
+
+  .contact-door-demo {
+    border: 1px solid var(--color-line);
+    background: white;
+    box-shadow: 0 12px 35px rgb(11 29 42 / 6%);
+  }
+
+  .contact-door-demo:hover { border-color: var(--color-accent); box-shadow: 0 18px 46px rgb(11 29 42 / 10%); }
+
+  .contact-door-label { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.13em; text-transform: uppercase; }
+  .contact-door-phone .contact-door-label { color: rgb(255 255 255 / 92%); }
+  .contact-door-book .contact-door-label { color: var(--color-accent-bright); }
+  .contact-door-demo .contact-door-label { color: var(--color-sea); }
+
+  .contact-door-title { margin-top: 0.1rem; font-family: var(--font-display); font-size: clamp(1.6rem, 2.4vw, 2.15rem); font-weight: 800; letter-spacing: -0.03em; }
+  .contact-door-demo .contact-door-title { color: var(--color-navy); }
+
+  .contact-door-text { max-width: 26rem; font-size: 0.95rem; line-height: 1.65; }
+  .contact-door-phone .contact-door-text { color: rgb(255 255 255 / 90%); }
+  .contact-door-book .contact-door-text { color: rgb(255 255 255 / 72%); }
+  .contact-door-demo .contact-door-text { color: var(--color-slate); }
+
+  .contact-door-cta { margin-top: auto; display: inline-flex; align-items: center; gap: 0.5rem; padding-top: 1rem; font-size: 0.85rem; font-weight: 800; }
+  .contact-door-phone .contact-door-cta,
+  .contact-door-book .contact-door-cta { color: white; }
+  .contact-door-demo .contact-door-cta { color: var(--color-accent); }
+</style>

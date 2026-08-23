@@ -24,9 +24,10 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
       ))}
     </nav>
 
-    <div class="hidden items-center gap-3 lg:flex">
-      <a class="text-sm font-bold text-navy transition-colors hover:text-accent" href={site.phoneHref}>Call {site.phoneDisplay}</a>
-      <a class="button button-small button-primary" href="/contact/">Request Free Demo</a>
+    <div class="hidden items-center gap-4 lg:flex">
+      <a class="text-sm font-bold text-navy transition-colors hover:text-accent" href="/contact/">Book a Call</a>
+      <a class="hidden text-sm font-bold text-navy transition-colors hover:text-accent xl:inline-flex" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Request a Demo <span aria-hidden="true">↗</span></a>
+      <a class="button button-small button-accent" href={site.phoneHref}>Call Now</a>
     </div>
 
     <details class="mobile-menu lg:hidden">
@@ -42,8 +43,9 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
           ))}
         </nav>
         <div class="mt-5 flex flex-col gap-3">
-          <a class="button button-primary" href="/contact/">Request Free Demo</a>
-          <a class="button button-outline" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+          <a class="button button-accent" href={site.phoneHref}>Call Now</a>
+          <a class="button button-outline" href="/contact/">Book a Call</a>
+          <a class="mt-1 text-center text-sm font-bold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Request a Demo <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </details>

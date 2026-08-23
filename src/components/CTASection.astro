@@ -18,9 +18,12 @@ const {
         <h2 class="mt-5 max-w-3xl text-balance text-4xl font-extrabold tracking-[-0.045em] text-white sm:text-5xl">{title}</h2>
         <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/68">{text}</p>
       </div>
-      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-        <a class="button button-accent" href="/contact/">Request My Free Demo <span aria-hidden="true">→</span></a>
-        <a class="button button-ghost-light" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+      <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+        <a class="button button-accent" href={site.phoneHref}>Call Now <span aria-hidden="true">→</span></a>
+        <a class="button button-ghost-light" href="/contact/">Book a Call</a>
+        <a class="text-sm font-bold text-white/70 underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-white" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">
+          Request a Demo <span aria-hidden="true">↗</span>
+        </a>
       </div>
     </div>
   </div>

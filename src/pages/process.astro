@@ -14,7 +14,9 @@ const steps = [
   {
     number: "02",
     title: "You answer the questions",
-    text: "One call, about twenty minutes. What you do, where you work, what you charge, what your license and insurance say, and which jobs you actually want more of. You do not write anything down. I do.",
+    text: "One call, about twenty minutes. What you do, where you work, what you charge, what your license and insurance say, and which jobs you actually want more of. You do not write anything down. I do. Would rather not talk it through live?",
+    linkText: "Request a Demo",
+    linkHref: site.googleFormUrl,
   },
   {
     number: "03",
@@ -48,7 +50,7 @@ const steps = [
   <PageHero eyebrow="How it works" title="You will see your website before you pay for it." intro="Most people who call me have already been burned once. Money up front, six months of silence, a half-finished site nobody ever launched. So I built the process backwards. You get a real site first. You decide after.">
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
       <a class="button button-accent" href="/services/">See the packages</a>
-      <a class="button button-ghost-light" href={site.phoneHref}>Call {site.phoneDisplay}</a>
+      <a class="button button-ghost-light" href={site.phoneHref}>Call Now</a>
     </div>
   </PageHero>
 
@@ -71,12 +73,26 @@ const steps = [
       <p class="eyebrow">Start to finish</p>
       <h2 class="mt-6 max-w-2xl text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Seven steps. No mystery in any of them.</h2>
       <ol class="mt-12 grid divide-y divide-line border-y border-line">
-        {steps.map((step) => (
+        {steps.map((step, index) => (
           <li class="process-step">
-            <span>{step.number}</span>
+            <div class="step-marker">
+              <span>{step.number}</span>
+              {index < steps.length - 1 && (
+                <div class="step-track" aria-hidden="true">
+                  <div class="step-fill"></div>
+                </div>
+              )}
+            </div>
             <div>
               <h3>{step.title}</h3>
-              <p>{step.text}</p>
+              <p>
+                {step.text}{" "}
+                {step.linkHref && (
+                  <a class="font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-4" href={step.linkHref} target="_blank" rel="noopener noreferrer">
+                    {step.linkText} <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </p>
             </div>
           </li>
         ))}
@@ -109,12 +125,59 @@ const steps = [
     </div>
   </section>
 
-  <CTASection title="Start with the demo." text="Tell me what you do and where you work. Seven days later you will be looking at your own website, and you will not have spent anything." />
+  <CTASection
+    title="Start with the demo."
+    text="Tell me what you do and where you work. Seven days later you will be looking at your own website, and you will not have spent anything."
+  />
 </BaseLayout>
 
 <style>
-  .process-step { display: grid; grid-template-columns: 3rem 1fr; gap: 1.5rem; padding-block: 1.8rem; }
-  .process-step span { display: inline-grid; height: 2.5rem; width: 2.5rem; place-items: center; border-radius: 999px; background: var(--color-accent); color: white; font-size: 0.72rem; font-weight: 700; }
+  .process-step { display: grid; grid-template-columns: 3rem 1fr; column-gap: 1.5rem; padding-block: 1.8rem; align-items: stretch; }
+  .step-marker { display: flex; flex-direction: column; align-items: center; }
+  .step-marker span {
+    display: inline-grid;
+    flex: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    place-items: center;
+    border-radius: 999px;
+    border: 2px solid var(--color-accent);
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.72rem;
+    font-weight: 700;
+    transition: background-color 250ms ease, color 250ms ease;
+  }
+  .step-track { position: relative; flex: 1; width: 2px; min-height: 1.5rem; margin-block: 0.6rem; background: var(--color-line); overflow: hidden; border-radius: 999px; }
+  .step-fill { position: absolute; inset: 0; transform: scaleY(1); transform-origin: top; background: var(--color-accent); }
   .process-step h3 { color: var(--color-navy); font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; }
   .process-step p { margin-top: 0.5rem; max-width: 40rem; color: var(--color-slate); font-size: 0.92rem; line-height: 1.7; }
+
+  /* Progress trace: each badge and connector animates on its own scroll-view progress. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .step-marker span {
+        background: transparent;
+        color: var(--color-accent);
+        animation: badge-fill linear both;
+        animation-timeline: view();
+        animation-range: cover 8% cover 42%;
+      }
+
+      .step-fill {
+        transform: scaleY(0);
+        animation: line-draw linear both;
+        animation-timeline: view();
+        animation-range: cover 15% cover 90%;
+      }
+    }
+  }
+
+  @keyframes badge-fill {
+    to { background: var(--color-accent); color: white; }
+  }
+
+  @keyframes line-draw {
+    to { transform: scaleY(1); }
+  }
 </style>

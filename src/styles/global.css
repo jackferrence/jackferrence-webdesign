@@ -3,14 +3,14 @@
 @theme {
   --color-navy: #0b1d2a;
   --color-navy-light: #132b3c;
-  --color-paper: #f7f3ea;
-  --color-mist: #fdfbf6;
+  --color-paper: #edf1f1;
+  --color-mist: #f8fbfb;
   --color-accent: #c92b0e;
   --color-accent-dark: #a2230b;
   --color-accent-bright: #f25b3f;
   --color-sea: #177f83;
   --color-slate: #587080;
-  --color-line: #d9ddd9;
+  --color-line: #d7dfdf;
   --font-sans: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
   --font-display: "Sora", "Segoe UI", Helvetica, Arial, sans-serif;
 }

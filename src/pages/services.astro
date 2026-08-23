@@ -41,7 +41,7 @@ const faqSchema = {
   <PageHero eyebrow="Services & pricing" title="A clear price for the website. Add exactly what else you need." intro="Start with a free personalized demo. These are the packages and prices if you decide to have Jack finish and launch the site.">
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
       <a class="button button-accent" href="#packages">Compare packages <span aria-hidden="true">↓</span></a>
-      <a class="button button-ghost-light" href="/contact/">Request My Free Demo</a>
+      <a class="button button-ghost-light" href="/contact/">Book a Call</a>
     </div>
   </PageHero>
 
@@ -56,6 +56,13 @@ const faqSchema = {
         {packages.map((item) => <PackageCard {...item} />)}
       </div>
       <p class="mt-6 text-sm text-slate">Additional revisions beyond the two included are billed at $110/hour.</p>
+      <p class="mt-3 text-sm text-slate">
+        Not sure which one? Fill out{" "}
+        <a class="font-extrabold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">
+          the form <span aria-hidden="true">↗</span>
+        </a>{" "}
+        and I'll tell you which fits.
+      </p>
     </div>
   </section>
 

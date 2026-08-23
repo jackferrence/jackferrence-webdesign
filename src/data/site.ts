@@ -13,6 +13,7 @@ export const site = {
   supportEmailHref: "mailto:support@jackferrence.com",
   location: "Newport Beach, California",
   linkedin: "https://www.linkedin.com/in/jack-ferrence-765610210/",
+  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLScCc1tn_QoT0ET27379Z4iBcpJ6OldzP2FkfXgr7z6750xM1A/viewform",
   serviceAreas: [
     "California",
     "Newport Beach",
@@ -109,6 +110,12 @@ export const demoFaqs = [
     question: "What do you need from me to get started?",
     answer:
       "Your business name, services, service area, current website if you have one, and what you want the new site to help customers do. Existing logos and photos help but are not required to begin.",
+  },
+  {
+    question: "Do I have to get on a call?",
+    answer: "No. Request a demo and Jack will have it built before you ever talk.",
+    linkText: "Request a Demo",
+    linkHref: site.googleFormUrl,
   },
 ];
 
