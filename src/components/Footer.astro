@@ -8,7 +8,6 @@ const year = new Date().getFullYear();
     <div class="grid gap-12 border-b border-white/15 pb-14 md:grid-cols-[1.4fr_0.8fr_0.8fr]">
       <div>
         <a href="/" class="inline-flex items-center gap-3 text-lg font-extrabold tracking-tight">
-          <span class="h-2.5 w-2.5 rounded-full bg-accent" aria-hidden="true"></span>
           {site.name}
         </a>
         <p class="mt-5 max-w-md text-base leading-relaxed text-white/68">{site.tagline} Fast, clear, and built by the same person who answers your call.</p>
@@ -25,7 +24,6 @@ const year = new Date().getFullYear();
         <div class="mt-5 grid gap-3">
           <a class="footer-link break-all" href={site.emailHref}>{site.email}</a>
           <a class="footer-link" href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
-          <a class="footer-link" href={site.github} target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
           <span class="text-sm text-white/58">Newport Beach, California</span>
         </div>
       </div>

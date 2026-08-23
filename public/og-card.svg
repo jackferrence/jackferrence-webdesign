@@ -2,11 +2,12 @@
   <rect width="1200" height="630" fill="#0b1d2a"/>
   <circle cx="1090" cy="-20" r="270" fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="2"/>
   <circle cx="1090" cy="-20" r="190" fill="none" stroke="#ffffff" stroke-opacity=".06" stroke-width="2"/>
-  <circle cx="94" cy="90" r="11" fill="#f25b3f"/>
-  <text x="125" y="102" fill="#fdfbf6" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="700">Jack Ferrence</text>
-  <text x="92" y="278" fill="#fdfbf6" font-family="Arial, Helvetica, sans-serif" font-size="73" font-weight="800" letter-spacing="-3">Websites for service</text>
-  <text x="92" y="363" fill="#f25b3f" font-family="Arial, Helvetica, sans-serif" font-size="73" font-weight="800" letter-spacing="-3">companies in SoCal.</text>
-  <text x="96" y="442" fill="#fdfbf6" fill-opacity=".62" font-family="Arial, Helvetica, sans-serif" font-size="27">Fast sites · Google Business Profile setup · Direct support</text>
-  <rect x="92" y="505" width="296" height="58" rx="11" fill="#f25b3f"/>
-  <text x="121" y="543" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">Based in Newport Beach</text>
+  <rect x="92" y="70" width="52" height="6" rx="3" fill="#c92b0e"/>
+  <text x="92" y="112" fill="#8ea3ae" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="2">NEWPORT BEACH, CALIFORNIA</text>
+  <text x="88" y="238" fill="#fdfbf6" font-family="Arial, Helvetica, sans-serif" font-size="90" font-weight="800" letter-spacing="-3">JACK FERRENCE</text>
+  <text x="90" y="330" fill="#fdfbf6" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">Websites for California</text>
+  <text x="90" y="395" fill="#c92b0e" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" letter-spacing="-2">service companies.</text>
+  <text x="92" y="452" fill="#fdfbf6" fill-opacity=".72" font-family="Arial, Helvetica, sans-serif" font-size="27">A free personalized website demo in under seven days.</text>
+  <line x1="92" y1="500" x2="1108" y2="500" stroke="#fdfbf6" stroke-opacity=".18" stroke-width="1"/>
+  <text x="92" y="548" fill="#fdfbf6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">jackferrence.com</text>
 </svg>

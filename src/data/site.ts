@@ -12,8 +12,7 @@ export const site = {
   supportEmail: "support@jackferrence.com",
   supportEmailHref: "mailto:support@jackferrence.com",
   location: "Newport Beach, California",
-  linkedin: "https://www.linkedin.com/in/jackferrence",
-  github: "https://github.com/jack-ferrence",
+  linkedin: "https://www.linkedin.com/in/jack-ferrence-765610210/",
   serviceAreas: [
     "California",
     "Newport Beach",
