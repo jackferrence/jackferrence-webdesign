@@ -59,7 +59,7 @@ import { site } from "../data/site";
           <span class="hidden text-xs font-bold text-slate sm:block">Usually 2 minutes</span>
         </div>
 
-        <form class="mt-8 grid gap-6" name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+        <form id="demo-request-form" class="mt-8 grid gap-6" name="demo-request" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="demo-request" />
           <p class="hidden" aria-hidden="true">
             <label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
@@ -68,11 +68,11 @@ import { site } from "../data/site";
           <div class="grid gap-6 sm:grid-cols-2">
             <label>
               <span class="field-label">Your name <span class="text-accent">*</span></span>
-              <input class="field-control" type="text" name="name" autocomplete="name" required placeholder="Your name" />
+              <input class="field-control" type="text" name="name" autocomplete="name" required maxlength="120" placeholder="Your name" />
             </label>
             <label>
               <span class="field-label">Business name <span class="text-accent">*</span></span>
-              <input class="field-control" type="text" name="business" autocomplete="organization" required placeholder="Business name" />
+              <input class="field-control" type="text" name="business" autocomplete="organization" required maxlength="120" placeholder="Business name" />
             </label>
           </div>
 
@@ -93,37 +93,64 @@ import { site } from "../data/site";
             </label>
             <label>
               <span class="field-label">City or primary service area <span class="text-accent">*</span></span>
-              <input class="field-control" type="text" name="service-area" autocomplete="address-level2" required placeholder="e.g. Newport Beach" />
+              <input class="field-control" type="text" name="service-area" autocomplete="address-level2" required maxlength="120" placeholder="e.g. Newport Beach" />
             </label>
           </div>
 
           <label>
             <span class="field-label">Current website URL <span class="text-slate">(optional)</span></span>
-            <input class="field-control" type="url" name="website" autocomplete="url" placeholder="https://" />
+            <input class="field-control" type="url" name="website" autocomplete="url" maxlength="200" placeholder="https://" />
           </label>
 
           <div class="grid gap-6 sm:grid-cols-2">
             <label>
               <span class="field-label">Phone</span>
-              <input class="field-control" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Your best number" />
+              <input class="field-control" type="tel" name="phone" autocomplete="tel" inputmode="tel" maxlength="30" placeholder="Your best number" />
             </label>
             <label>
               <span class="field-label">Email</span>
-              <input class="field-control" type="email" name="email" autocomplete="email" placeholder="you@business.com" />
+              <input class="field-control" type="email" name="email" autocomplete="email" maxlength="200" placeholder="you@business.com" />
             </label>
           </div>
-          <p class="-mt-3 text-xs text-slate">Provide at least one so Jack can reach you.</p>
+          <p id="contact-method-hint" class="-mt-3 text-xs text-slate">Provide at least one so Jack can reach you.</p>
 
           <label>
             <span class="field-label">What should the new site help customers do? <span class="text-slate">(optional)</span></span>
-            <textarea class="field-control min-h-28 resize-y" name="goal" placeholder="Request service, call directly, request a quote—whatever matters most."></textarea>
+            <textarea class="field-control min-h-28 resize-y" name="goal" maxlength="1000" placeholder="Request service, call directly, request a quote—whatever matters most."></textarea>
           </label>
 
           <div class="flex flex-col gap-4 border-t border-line pt-7 sm:flex-row sm:items-center sm:justify-between">
             <p class="max-w-xs text-xs leading-relaxed text-slate">Your information goes directly to Jack and is used only to respond to this request.</p>
-            <button class="button button-accent sm:min-w-48" type="submit">Book a Call <span aria-hidden="true">→</span></button>
+            <button class="button button-accent sm:min-w-48" type="submit">
+              <span class="submit-label">Book a Call</span> <span aria-hidden="true" class="submit-arrow">→</span>
+            </button>
           </div>
         </form>
+
+        <script>
+          const form = document.getElementById("demo-request-form");
+          const phone = form?.querySelector<HTMLInputElement>('[name="phone"]');
+          const email = form?.querySelector<HTMLInputElement>('[name="email"]');
+          const hint = document.getElementById("contact-method-hint");
+
+          form?.addEventListener("submit", (event) => {
+            const button = form.querySelector('button[type="submit"]');
+            if (!(button instanceof HTMLButtonElement) || button.disabled) return;
+
+            if (phone && email && !phone.value.trim() && !email.value.trim()) {
+              event.preventDefault();
+              phone.setCustomValidity("Enter a phone number or an email so Jack can reach you.");
+              phone.reportValidity();
+              hint?.classList.add("text-accent", "font-bold");
+              phone.addEventListener("input", () => phone.setCustomValidity(""), { once: true });
+              return;
+            }
+
+            button.disabled = true;
+            const label = button.querySelector(".submit-label");
+            if (label) label.textContent = "Sending…";
+          });
+        </script>
       </div>
     </div>
   </section>

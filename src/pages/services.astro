@@ -9,8 +9,8 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${site.url}/services/#service`,
-  name: "Web design and Google Business Profile setup",
-  description: "Websites, local business listing setup, and ongoing web support for owner-operated service companies across California.",
+  name: "Web design, Google Business Profile, and Yelp setup",
+  description: "Websites, Google Business Profile and Yelp listing setup, and ongoing web support for owner-operated service companies across California.",
   provider: { "@id": `${site.url}/#business` },
   areaServed: site.serviceAreas.map((name) => ({ "@type": "Place", name })),
   serviceType: "Website design and local online presence setup",
@@ -22,6 +22,8 @@ const serviceSchema = {
       { "@type": "Offer", price: "1900", priceCurrency: "USD", itemOffered: { "@type": "Service", name: "Three-page website" } },
       { "@type": "Offer", price: "2500", priceCurrency: "USD", itemOffered: { "@type": "Service", name: "Five-page website" } },
       { "@type": "Offer", price: "500", priceCurrency: "USD", itemOffered: { "@type": "Service", name: "Google Business Profile setup" } },
+      { "@type": "Offer", price: "500", priceCurrency: "USD", itemOffered: { "@type": "Service", name: "Yelp profile setup" } },
+      { "@type": "Offer", price: "750", priceCurrency: "USD", itemOffered: { "@type": "Service", name: "Google + Yelp together" } },
     ],
   },
 };
@@ -37,7 +39,7 @@ const faqSchema = {
 };
 ---
 
-<BaseLayout title="Service Business Website Packages" description="Compare website packages, Google Business Profile setup, review systems, photography, and domain email help for California service companies." structuredData={[serviceSchema, faqSchema]}>
+<BaseLayout title="Service Business Website Packages" description="Compare website packages, Google Business Profile and Yelp setup, review systems, photography, and domain email help for California service companies." structuredData={[serviceSchema, faqSchema]}>
   <PageHero eyebrow="Services & pricing" title="A clear price for the website. Add exactly what else you need." intro="Start with a free personalized demo. These are the packages and prices if you decide to have Jack finish and launch the site.">
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
       <a class="button button-accent" href="#packages">Compare packages <span aria-hidden="true">↓</span></a>
@@ -72,7 +74,7 @@ const faqSchema = {
         <div>
           <p class="eyebrow">Additional services</p>
           <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Add exactly what is missing.</h2>
-          <p class="mt-6 text-base leading-relaxed text-slate">Useful when the site is fine but the Google listing is not—or when one strong service page will do more than a full rebuild.</p>
+          <p class="mt-6 text-base leading-relaxed text-slate">Useful when the site is fine but the Google or Yelp listing is not—or when one strong service page will do more than a full rebuild.</p>
         </div>
         <div class="divide-y divide-line border-y border-line">
           {additionalServices.map((item) => (

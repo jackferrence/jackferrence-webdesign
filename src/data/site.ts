@@ -3,7 +3,7 @@ export const site = {
   legalName: "Jack Ferrence Web Design",
   tagline: "Websites for California service companies.",
   description:
-    "Fast websites and Google Business Profile setup for owner-operated service companies across California, based in Newport Beach.",
+    "Fast websites and Google Business Profile and Yelp setup for owner-operated service companies across California, based in Newport Beach.",
   url: "https://jackferrence.com",
   phoneDisplay: "(949) 414-6804",
   phoneHref: "tel:+19494146804",
@@ -57,10 +57,12 @@ export const packages = [
 ];
 
 export const additionalServices = [
-  { name: "Google Business Profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, description, photos, hours, and core profile fields. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window.", timing: "3 days after admin confirmation" },
+  { name: "Google Business Profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, description, photos, hours, and core profile fields. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window. Customers are 2.7x more likely to consider a business reputable when it has a complete Business Profile on Search and Maps (Google).", timing: "3 days after admin confirmation" },
+  { name: "Yelp profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, hours, photos, and core profile fields on Yelp. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window. 44% of consumers refer to Yelp for business reviews (BrightLocal, 2026).", timing: "3 days after admin confirmation" },
+  { name: "Google + Yelp together", price: "$750", detail: "Both profiles set up together at a bundled rate. Same 3-day guarantee from admin access, with verification handled separately by the business owner.", timing: "3 days after admin confirmation" },
   { name: "Extra service page", price: "$250", detail: "A targeted landing page for one additional service, built to match the main site.", timing: "2–3 days" },
   { name: "On-site photo session", price: "$350", detail: "A practical local shoot for the owner, team, equipment, process, and finished work. About 2 hours.", timing: "Scheduled" },
-  { name: "Review request system", price: "$200", detail: "A simple branded link and repeatable process that makes asking happy customers easier.", timing: "3 days" },
+  { name: "Review request system", price: "$200", detail: "A simple branded link and repeatable process that makes asking happy Google customers easier. This system is Google only—Yelp prohibits soliciting reviews and filters out ones it detects as solicited.", timing: "3 days" },
 ];
 
 export const demos = [
@@ -138,7 +140,7 @@ export const faqs = [
   {
     question: "Can you guarantee where I rank on Google?",
     answer:
-      "No honest provider can guarantee a ranking. The work covers a technically sound site, clear local service content, and a correctly set up Google Business Profile—the foundation needed to compete locally.",
+      "No honest provider can guarantee a ranking. The work covers a technically sound site, clear local service content, and a correctly set up Google Business Profile—the foundation needed to compete locally. That foundation matters for AI answers too: 58% of ChatGPT's results for local-intent prompts are business websites, and directories account for only 15% (BrightLocal). No site, no citation.",
   },
   {
     question: "What happens after launch?",
