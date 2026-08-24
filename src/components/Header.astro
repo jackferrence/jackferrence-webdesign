@@ -25,9 +25,8 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
     </nav>
 
     <div class="hidden items-center gap-4 lg:flex">
-      <a class="text-sm font-bold text-navy transition-colors hover:text-accent" href="/contact/">Book a Call</a>
-      <a class="hidden text-sm font-bold text-navy transition-colors hover:text-accent xl:inline-flex" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Request a Demo <span aria-hidden="true">↗</span></a>
-      <a class="button button-small button-accent" href={site.phoneHref}>Call Now</a>
+      <a class="inline-flex items-center py-3 text-sm font-bold text-navy transition-colors hover:text-accent" href={site.phoneHref}>Call Now</a>
+      <a class="button button-small button-accent" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
     </div>
 
     <details class="mobile-menu lg:hidden">
@@ -43,9 +42,8 @@ const isActive = (href: string) => (href === "/" ? currentPath === "/" : current
           ))}
         </nav>
         <div class="mt-5 flex flex-col gap-3">
-          <a class="button button-accent" href={site.phoneHref}>Call Now</a>
-          <a class="button button-outline" href="/contact/">Book a Call</a>
-          <a class="mt-1 text-center text-sm font-bold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Request a Demo <span aria-hidden="true">↗</span></a>
+          <a class="button button-accent" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
+          <a class="mt-1 text-center text-sm font-bold text-navy underline decoration-accent decoration-2 underline-offset-4" href={site.phoneHref}>Call Now</a>
         </div>
       </div>
     </details>

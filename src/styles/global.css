@@ -204,7 +204,7 @@
   .button-primary:hover { background: var(--color-navy-light); }
   .button-accent { background: var(--color-accent); color: white; box-shadow: 0 12px 35px rgb(201 43 14 / 22%); }
   .button-accent:hover { background: var(--color-accent-dark); }
-  .button-outline { border-color: rgb(11 29 42 / 20%); color: var(--color-navy); background: transparent; }
+  .button-outline { border-color: rgb(11 29 42 / 50%); color: var(--color-navy); background: transparent; }
   .button-outline:hover { border-color: var(--color-navy); background: white; }
   .button-ghost-light { border-color: rgb(255 255 255 / 26%); color: white; }
   .button-ghost-light:hover { border-color: white; background: rgb(255 255 255 / 8%); }

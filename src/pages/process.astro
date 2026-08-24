@@ -15,7 +15,7 @@ const steps = [
     number: "02",
     title: "You answer the questions",
     text: "One call, about twenty minutes. What you do, where you work, what you charge, what your license and insurance say, and which jobs you actually want more of. You do not write anything down. I do. Would rather not talk it through live?",
-    linkText: "Request a Demo",
+    linkText: "Request a Demo (10 minutes)",
     linkHref: site.googleFormUrl,
   },
   {
@@ -49,8 +49,8 @@ const steps = [
 <BaseLayout title="How It Works" description="A demo-first website process: agree to a free demo, answer a few questions, and see a real site within seven days before you decide whether to pay for anything.">
   <PageHero eyebrow="How it works" title="You will see your website before you pay for it." intro="Most people who call me have already been burned once. Money up front, six months of silence, a half-finished site nobody ever launched. So I built the process backwards. You get a real site first. You decide after.">
     <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-      <a class="button button-accent" href="/services/">See the packages</a>
-      <a class="button button-ghost-light" href={site.phoneHref}>Call Now</a>
+      <a class="button button-accent" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
+      <a class="button button-ghost-light" href="/services/">See the packages</a>
     </div>
   </PageHero>
 

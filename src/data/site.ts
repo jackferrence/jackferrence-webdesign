@@ -13,7 +13,7 @@ export const site = {
   supportEmailHref: "mailto:support@jackferrence.com",
   location: "Newport Beach, California",
   linkedin: "https://www.linkedin.com/in/jack-ferrence-765610210/",
-  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLScCc1tn_QoT0ET27379Z4iBcpJ6OldzP2FkfXgr7z6750xM1A/viewform",
+  googleFormUrl: "https://docs.google.com/forms/d/e/1FAIpQLScNWcDu4L2TNBYOOZdFvP2TlDUY98LfwZBtBvWBPH9XkJ2jRw/viewform",
   serviceAreas: [
     "California",
     "Newport Beach",
@@ -57,31 +57,29 @@ export const packages = [
 ];
 
 export const additionalServices = [
-  { name: "Google Business Profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, description, photos, hours, and core profile fields. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window. Customers are 2.7x more likely to consider a business reputable when it has a complete Business Profile on Search and Maps (Google).", timing: "3 days after admin confirmation" },
-  { name: "Yelp profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, hours, photos, and core profile fields on Yelp. Guaranteed within 3 days of receiving admin access; verification is performed by the business owner and its duration is outside this window. 44% of consumers refer to Yelp for business reviews (BrightLocal, 2026).", timing: "3 days after admin confirmation" },
-  { name: "Google + Yelp together", price: "$750", detail: "Both profiles set up together at a bundled rate. Same 3-day guarantee from admin access, with verification handled separately by the business owner.", timing: "3 days after admin confirmation" },
-  { name: "Yelp Request a Quote setup", price: "$300", detail: "Configuration, service categories, mobile notifications, and three written response templates—instant auto-reply, qualified quote, and out-of-scope decline.", timing: "2 days after admin access" },
-  { name: "Extra service page", price: "$250", detail: "A targeted landing page for one additional service, built to match the main site.", timing: "2–3 days" },
-  { name: "On-site photo session", price: "$350", detail: "A practical local shoot for the owner, team, equipment, process, and finished work. About 2 hours.", timing: "Scheduled" },
-  { name: "Review request system", price: "$200", detail: "A simple branded link and repeatable process that makes asking happy Google customers easier. This system is Google only—Yelp prohibits soliciting reviews and filters out ones it detects as solicited.", timing: "3 days" },
+  { name: "Google Business Profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, description, photos, hours, and core profile fields. Customers are 2.7x more likely to consider a business reputable when it has a complete Business Profile on Search and Maps (Google).", timing: "3 days after admin access" },
+  { name: "Yelp profile setup", price: "$500", detail: "Claiming or clean setup, categories, services, hours, photos, and core profile fields on Yelp. 44% of consumers refer to Yelp for business reviews (BrightLocal, 2026). Review requests are Google only—Yelp prohibits soliciting reviews and filters out ones it flags as solicited.", timing: "3 days after admin access" },
+  { name: "Google + Yelp together", price: "$750", detail: "Both profiles set up together at a bundled rate, with verification handled separately by the business owner.", timing: "3 days after admin access" },
 ];
+
+export const extraServicePage = { name: "Extra service page", price: "$300", detail: "A targeted landing page for one additional service, built to match the main site.", timing: "3 days" };
 
 export const demos = [
   {
-    trade: "Marine surveying",
+    trade: "Painting contractor",
     package: "Five-page package",
-    name: "Meridian Marine Surveying",
-    kicker: "Trust for high-stakes vessel decisions.",
+    name: "Cardinal Painting Co.",
+    kicker: "The prep is why it still looks good in year eight.",
     theme: "sand",
-    url: "https://meridian-marine-surveying.jackferrence11.chatgpt.site",
+    url: "/demos/cardinal-painting/",
   },
   {
-    trade: "Hull maintenance",
-    package: "One-page package",
-    name: "Tidewater Hull Service",
-    kicker: "Fast local service, easy to call.",
-    theme: "coral",
-    url: "https://tidewater-hull-service.jackferrence11.chatgpt.site",
+    trade: "Plumbing",
+    package: "Five-page package",
+    name: "Redline Plumbing & Drain",
+    kicker: "A real number before the work starts.",
+    theme: "blue",
+    url: "/demos/redline-plumbing/",
   },
   {
     trade: "HVAC contractor",
@@ -91,6 +89,12 @@ export const demos = [
     theme: "orange",
     url: "/demos/westline-air/",
   },
+];
+
+export const otherDemos = [
+  { name: "Stonecrop Landscape", url: "/demos/stonecrop-landscape/" },
+  { name: "Cobalt Pool Care", url: "/demos/cobalt-pool/" },
+  { name: "Harbor Point Marine", url: "/demos/harbor-point/" },
 ];
 
 export const demoFaqs = [
@@ -117,7 +121,7 @@ export const demoFaqs = [
   {
     question: "Do I have to get on a call?",
     answer: "No. Request a demo and Jack will have it built before you ever talk.",
-    linkText: "Request a Demo",
+    linkText: "Request a Demo (10 minutes)",
     linkHref: site.googleFormUrl,
   },
 ];
@@ -131,7 +135,7 @@ export const faqs = [
   {
     question: "What do you need from me?",
     answer:
-      "Your services, service area, phone number, any pricing you want shown, and the photos or logo you already have. If your visuals are thin, an on-site photo session is available.",
+      "Your services, service area, phone number, any pricing you want shown, and the photos or logo you already have.",
   },
   {
     question: "Will I own the site and domain?",

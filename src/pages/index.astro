@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTASection from "../components/CTASection.astro";
 import DemoCard from "../components/DemoCard.astro";
-import { demoFaqs, demos, site } from "../data/site";
+import { demoFaqs, demos, otherDemos, site } from "../data/site";
 
 const description = "Get a personalized website demo for your California service business in under seven days. No cost or commitment. Built directly by Jack Ferrence.";
 
@@ -20,10 +20,10 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
         <p class="mt-8 max-w-xl text-lg leading-relaxed text-slate sm:text-xl">
           Jack creates a personalized website demo for your service business in under seven days. No cost. No commitment. If you like the direction, he can finish and launch the site.
         </p>
-        <div class="mt-9 flex flex-wrap gap-3">
-          <a class="button button-accent" href={site.phoneHref}>Call Now <span aria-hidden="true">→</span></a>
-          <a class="button button-primary" href="/contact/">Book a Call</a>
-          <a class="button button-outline" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Request a Demo <span aria-hidden="true">↗</span></a>
+        <div class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <a class="button button-accent" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="/contact/">Book a Call</a>
+          <a class="text-sm font-bold text-navy underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent" href={site.phoneHref}>Call Now</a>
         </div>
         <div class="mt-9 flex flex-wrap gap-x-6 gap-y-3 border-t border-line pt-6 text-xs font-extrabold uppercase tracking-[0.1em] text-slate">
           <span>Personalized to your business</span><span>Delivered in under 7 days</span><span>Built by Jack</span>
@@ -32,7 +32,7 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
 
       <div class="relative">
         <div class="hero-ring absolute -left-8 -top-8 h-24 w-24 rounded-full border-2 border-sea/40"></div>
-        <div class="hero-in hero-card relative rounded-2xl border border-line bg-white p-6 shadow-[0_30px_80px_rgba(11,29,42,0.14)] sm:p-10" style="--d: 160ms">
+        <div class="hero-in hero-card relative max-w-xl rounded-2xl border border-line bg-white p-6 shadow-[0_30px_80px_rgba(11,29,42,0.14)] sm:p-10" style="--d: 160ms">
           <div class="flex items-center justify-between border-b border-line pb-6">
             <div>
               <p class="text-sm font-extrabold uppercase tracking-[0.15em] text-sea">A real referral</p>
@@ -71,10 +71,18 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
           <h2 class="mt-6 text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">Built around the way each service is actually sold.</h2>
         </div>
       </div>
-      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">A marine surveyor, hull service, and HVAC contractor should not sound or look identical. These are demonstration builds, not presented as completed client projects.</p>
+      <p class="mt-5 max-w-2xl text-base leading-relaxed text-slate">A painting contractor, a plumber, and an HVAC contractor should not sound or look identical. These are demonstration builds, not presented as completed client projects.</p>
       <div class="mt-12 grid gap-5 lg:grid-cols-3">
         {demos.map((demo) => <DemoCard trade={demo.trade} packageName={demo.package} name={demo.name} kicker={demo.kicker} theme={demo.theme} url={demo.url} compact />)}
       </div>
+      <p class="mt-6 text-sm text-slate">
+        Also built:{" "}
+        {otherDemos.map((demo, index) => (
+          <>
+            <a class="font-bold text-navy underline decoration-accent decoration-2 underline-offset-4" href={demo.url} target="_blank" rel="noopener noreferrer">{demo.name}</a>{index < otherDemos.length - 1 ? ", " : "."}
+          </>
+        ))}
+      </p>
     </div>
   </section>
 
@@ -118,7 +126,7 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
           <p class="mt-2 text-sm leading-relaxed text-slate">Review the demo first. Decide afterward whether a paid build makes sense.</p>
         </div>
       </div>
-      <a class="button button-accent mt-9" href="/contact/">Book a Call <span aria-hidden="true">→</span></a>
+      <a class="button button-accent mt-9" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
@@ -163,7 +171,7 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
           <p>If the direction fits, choose a website package and Jack finishes the build. If not, you are not committed.</p>
         </article>
       </div>
-      <a class="button button-primary mt-9" href="/contact/">Book a Call <span aria-hidden="true">→</span></a>
+      <a class="button button-accent mt-9" href={site.googleFormUrl} target="_blank" rel="noopener noreferrer">Get My Free Demo — 10 min <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
@@ -173,7 +181,7 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
       <h2 class="mt-6 max-w-2xl text-balance text-4xl font-extrabold tracking-[-0.05em] text-navy sm:text-5xl">The pieces customers need to find you, trust you, and contact you.</h2>
       <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate">The website is the core offer. When needed, Jack can also help put the supporting basics in place so the site works as part of one clear customer path.</p>
       <div class="mt-10 grid gap-5 lg:grid-cols-2">
-        <article class="rounded-2xl border border-navy/15 bg-navy p-7 text-white lg:row-span-4 lg:flex lg:flex-col lg:justify-center">
+        <article class="rounded-2xl border border-navy/15 bg-navy p-7 text-white lg:row-span-2 lg:flex lg:flex-col lg:justify-center">
           <p class="text-xs font-extrabold uppercase tracking-[0.12em] text-accent-bright">The core offer</p>
           <h3 class="mt-3 text-xl font-extrabold tracking-[-0.02em]">Sales website</h3>
           <ul class="mt-5 grid gap-3 text-sm font-semibold text-white/85">
@@ -186,15 +194,7 @@ const referralQuestions = ["What do you do?", "Where do you work?", "Why should 
         </article>
         <article class="rounded-2xl border border-line bg-white p-6">
           <h3 class="text-base font-extrabold tracking-[-0.02em] text-navy">Yelp profile setup</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate">Set up or organize your Yelp business page, or bundle it with the Google profile.</p>
-        </article>
-        <article class="rounded-2xl border border-line bg-white p-6">
-          <h3 class="text-base font-extrabold tracking-[-0.02em] text-navy">Review request system</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate">Give satisfied customers a clear, repeatable way to leave a Google review. This is Google only—Yelp prohibits soliciting reviews and filters out ones it flags as solicited.</p>
-        </article>
-        <article class="rounded-2xl border border-line bg-white p-6">
-          <h3 class="text-base font-extrabold tracking-[-0.02em] text-navy">On-site photo session</h3>
-          <p class="mt-2 text-sm leading-relaxed text-slate">Capture real work, equipment, and locations so the site looks like your business.</p>
+          <p class="mt-2 text-sm leading-relaxed text-slate">Set up or organize your Yelp business page, or bundle it with the Google profile. Review requests are Google only—Yelp prohibits soliciting reviews.</p>
         </article>
       </div>
     </div>
